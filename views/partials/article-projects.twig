@@ -1,0 +1,29 @@
+<article class="{{post.post_class}}{% if is_archive %} project-preview{% endif %}">
+    {% block content %}
+        {% if is_archive %}
+            {% if post.thumbnail.src %}
+                <a href="{{post.link}}"><img src="{{post.thumbnail.src|resize(1000,300)}}" alt="{{post.thumbnail.alt | default(post.thumbnail.post_title)}}" class="project-preview__image"></a>
+            {% endif %}
+            <h1 class="project-preview__title"><a href="{{post.link}}">{{post.title}}</a></h1>
+            <p>{{post.get_preview()}}</p>
+        {% else %}
+            <header class="single-project__header">
+                {% if not title %}
+                <h1>{{post.title}}</h1>
+                {% endif %}
+            </header>
+            <div class="single-project__content">
+                {{post.content}}
+            </div>
+            <footer class="single-project__contributors">
+                <h3 class="contibutors-list__title">Contributors</h3>
+                <ul class="contributors-list">
+                    {% for contributor in contributors %}
+                        {# TODO: generate url properly #}
+                        <li class="contributor-list__contibutor"><a href="/members/#{{contributor.data.user_nicename}}">{{contributor.data.display_name}}</a></li>
+                    {% endfor %}
+                </ul>
+            </footer>
+        {% endif %}
+    {% endblock %}
+</article>

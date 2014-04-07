@@ -1,0 +1,238 @@
+.screen-reader-text {
+    @extend %scut-hide-visually;
+}
+
+.donate-options__option {
+    background-color: darken($bgc, 5%);
+    border: 1px solid darken($bgc, 15%);
+    border-radius: .3em;
+    padding-top: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    overflow: hidden;
+
+    .button {
+        display: block;
+        border-radius: 0;
+    }
+}
+
+.block--banner {
+    background-color: $link-c;
+    color: $bgc;
+    box-shadow: inset 0 .25em .5em darken($link-c, 20%);
+    @include tp-padding-leader(2);
+    @include tp-padding-trailer(2);
+
+    .mailing-list-subscribe {
+        @include tp-fs(1);
+
+        label {
+            @extend %scut-hide-visually;
+        }
+    }
+
+    button,
+    input[type=submit]
+    .button {
+        @extend .button--dark;
+    }
+}
+
+.block--highlight {
+    .block__inner {
+        background-color: darken($bgc, 5%);
+        border: 1px solid darken($bgc, 15%);
+        border-radius: .3em;
+        // padding: .5em;
+        @include tp-padding-leader;
+        @include tp-padding-trailer;
+        // @include tp-trailer;
+        overflow: hidden;
+    }
+}
+
+.block--separator {
+    border-top: 1px solid darken($bgc, 15%);
+}
+
+
+// Post preview
+
+.post-preview {
+    @include tp-trailer(2);
+    @include tp-padding-trailer(2);
+    // border-bottom: 1px solid $border-c;
+}
+
+.post-preview__image + .post-preview__title {
+    @include tp-leader(-2);
+    position: relative;
+    // background: linear-gradient(to bottom, rgba($bgc, 0), rgba($bgc, .99));
+    a {
+        display: inline-block;
+        background-color: $bgc;
+        padding-right: 0.2em;
+    }
+}
+
+.post-preview__status {
+    @extend %tp-icon;
+    @extend .icon-message;
+    position: relative;
+    @include typecsset-space(padding, 1);
+    background-color: darken($bgc, 5%);
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        font-size: 7em;
+        color: darken($bgc, 10%);
+        line-height: .8;
+        right: 0;
+        bottom: 0;
+        transform: rotate(-20deg);
+        z-index: 0;
+    }
+}
+
+.read-more {
+    // @extend .button--boring;
+    // display: block;
+}
+
+.post-preview__status__time {
+    // @include tp-fs(-1);
+    position: relative;
+}
+
+// Single post
+
+.single-post__header {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-color: $button-bgc;
+    box-shadow: inset 0 .25em .5em rgba(0,0,0,.2);
+    @include tp-leader(-1);
+    @include tp-trailer(1);
+    @include tp-padding-leader(1);
+    @include tp-padding-trailer(1);
+    @include breakpoint($mid-break, lt-ie9) {
+        @include tp-padding-leader(2);
+        @include tp-padding-trailer(2);
+    }
+
+    @include breakpoint($large-break, lt-ie9) {
+        @include tp-padding-leader(4);
+        @include tp-padding-trailer(4);
+    }
+
+    h1 {
+        margin: 0;
+        color: $bgc;
+        @include breakpoint($large-break, lt-ie9) {
+            @include tp-fs(5);
+        }
+    }
+
+    &.has-bgimg h1 {
+        text-shadow: 0 0 .5em $text-c;
+    }
+}
+
+
+
+// Member list
+
+.member {
+    border-bottom: 1px solid $border-c;
+    @include typecsset-space(padding-left, 1);
+    @include typecsset-space(padding-right, 1);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:target {
+        // border-bottom: 2px solid $green;
+        background-color: darken($bgc, 5%);
+    }
+}
+
+.member__title {
+    @include tp-trailer(.5);
+}
+
+.member__info {
+    @include tp-fs(2);
+    line-height: 1;
+
+    a {
+        display: inline-block;
+        min-width: 1em;
+        text-align: center;
+    }
+}
+
+.member__description {
+    @include tp-trailer(1);
+    @include tp-leader(1);
+}
+
+.member__image {
+    img {
+        display: block;
+        border: 1px solid $border-c;
+        border-radius: .3em;
+
+        // .member:target & {
+        //     border-color: $green;
+        // }
+    }
+}
+
+// Social icons
+
+.dev-share-buttons-link {
+    @extend %tp-icon;
+}
+
+.dev-share-buttons-link__text {
+    @extend %scut-hide-visually;
+}
+
+.dev-share-buttons-link--twitter {
+    @extend .icon-twitter;
+}
+
+.dev-share-buttons-link--facebook {
+    @extend .icon-facebook;
+}
+
+.dev-share-buttons-link--google {
+    @extend .icon-google-plus;
+}
+
+.dev-share-buttons-link--github {
+    @extend .icon-github-alt;
+}
+
+// Projects
+
+.project-preview {
+    .read-more {
+        @extend .button--boring;
+        display: block;
+        text-align: center;
+        @include tp-leader(1);
+    }
+}
+
+.project-preview__title {
+    @extend .h3;
+}
+
+.single-project__contributors {
+    @include tp-leader(2);
+}

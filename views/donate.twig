@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="donate-info">
+        {{post.content}}
+    </div>
+    <div class="donate-options">
+        {% for option in post.get_field('donation_options') %}
+             <div class="donate-options__option">
+                 <h2 class="donate-options__title">{{option.title}}</h2>
+                 {{option.content}}
+                 <a href="{{option.button_link}}" class="button">{{option.button_text}}</a>
+             </div>
+        {% endfor %}
+     </div>
+{% endblock %}

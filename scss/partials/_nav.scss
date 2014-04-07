@@ -1,0 +1,109 @@
+.main-nav {
+    border-bottom: 1px solid $border-c;
+}
+
+.main-nav__ul {
+
+}
+
+.main-nav__li {
+
+}
+
+.main-nav__a {
+    color: $nav-link-c;
+    background: $nav-link-bg;
+    font-weight: bold;
+
+    @include scut-selected(true) {
+        color: $nav-link-c--hover;
+        background: $nav-link-bg--hover;
+    }
+
+    &.is-current {
+        color: $nav-link-c--current;
+        background: $nav-link-bg--current;
+    }
+
+}
+
+// Unlike the main nav this is the ul element
+.sub-nav {
+
+}
+
+.sub-nav__li {
+
+}
+
+.sub-nav__a {
+    color: $subnav-link-c;
+    background: $subnav-link-bg;
+
+    @include scut-selected(true) {
+        color: $subnav-link-c--hover;
+        background: $subnav-link-bg--hover;
+    }
+
+    &.is-current {
+        color: $subnav-link-c--current;
+        background: $subnav-link-bg--current;
+    }
+}
+
+.pagination {
+    @include tp-leader;
+    text-align: center;
+}
+
+.pagination__ul {
+    @extend %scut-list-inline;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination__link {
+    display: inline-block;
+    min-width: 1.5em;
+    text-align: center;
+    padding: .2em .4em;
+    background: $text-c;
+    color: $bgc;
+    border-radius: .1em;
+    font-weight: bold;
+    transition: background $transition-fast;
+
+    @include scut-selected(true) {
+        background: shade($text-c, 40%);
+        color: $bgc;
+    }
+
+    &.current {
+        background: $link-c;
+    }
+}
+
+.pagination__link--next {
+    @extend .pagination__link;
+
+    &:after {
+        content: $scut-gt;
+    }
+}
+
+.pagination__link--next__text {
+    @extend %scut-hide-visually;
+}
+
+.pagination__link--prev {
+    @extend .pagination__link;
+
+    &:before {
+        content: $scut-lt;
+    }
+}
+
+.pagination__link--prev__text {
+    @extend %scut-hide-visually;
+}

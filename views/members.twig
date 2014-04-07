@@ -1,0 +1,71 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="members-post-content">
+        {{post.content}}
+    </div>
+    <ul class="members-list">
+        {% for member in members %}
+            <li class="member" id='{{member.userdata.data.user_nicename}}'>
+                {# <pre>{{member|print_r}}</pre> #}
+                <div class="member__image">{{member.avatar}}</div>
+                <div class="member__content">
+                    <h2 class="member__title">{{member.userdata.display_name}}</h2>
+                    {# <dl class="member__info">
+                        {% if member.userdata.user_url %}
+                            <dt>Website</dt>
+                            <dd><a href="{{member.userdata.user_url}}">{{member.userdata.user_url}}</a></dd>
+                        {% endif %}
+                        {% if member.meta.twitter|first %}
+                            <dt>Twitter</dt>
+                            <dd><a href="http://www.twitter.com/{{member.meta.twitter|first}}/">@{{member.meta.twitter|first}}</a></dd>
+                        {% endif %}
+                        {% if member.meta.googleplus|first %}
+                            <dt>Google Plus</dt>
+                            <dd><a href="{{member.meta.googleplus|first}}">{{member.meta.googleplus|first}}</a></dd>
+                        {% endif %}
+                        {% if member.meta.facebook|first %}
+                            <dt>Facebook</dt>
+                            <dd><a href="{{member.meta.facebook|first}}">{{member.meta.facebook|first}}</a></dd>
+                        {% endif %}
+                    </dl> #}
+                    <div class="member__info">
+                        {% if member.userdata.user_url %}
+                            <a data-hint="Website" class="hint--right" href="{{member.userdata.user_url}}"><span class="icon-website"></span><span class="screen-reader-text">Website</span></a>
+                        {% endif %}
+                        {% if member.meta.twitter|first %}
+                            <a data-hint="Twitter" class="hint--right" href="http://www.twitter.com/{{member.meta.twitter|first}}/"><span class="icon-twitter"></span><span class="screen-reader-text">Twitter</span></a>
+                        {% endif %}
+                       {#  {% if member.meta.googleplus|first %}
+                            <a data-hint="Google Plus" class="hint--right" href="{{member.meta.googleplus|first}}"><span class="icon-googleplus"></span><span class="screen-reader-text">Google Plus</span></a>
+                        {% endif %} #}
+                        {% if member.meta.facebook|first %}
+                            <a data-hint="Facebook" class="hint--right" href="{{member.meta.facebook|first}}"><span class="icon-facebook"></span><span class="screen-reader-text">Facebook</span></a>
+                        {% endif %}
+                    </div>
+                    {% if member.meta.description|first %}
+                        <div class="member__description">
+                            {{member.meta.description|first|wpautop}}
+                        </div>
+                    {% endif %}
+                    {% if member.posts %}
+                        <h3>Blog Posts</h3>
+                        <ul class="member__posts">
+                            {% for post in member.posts %}
+                            <li class="member__posts__post"><a href="{{post.link}}">{{post.title}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% if member.projects %}
+                        <h3>Projects</h3>
+                        <ul class="member__projects">
+                            {% for project in member.projects %}
+                            <li class="member__projects__project"><a href="{{project.link}}">{{project.title}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

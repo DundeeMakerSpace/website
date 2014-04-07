@@ -1,0 +1,9 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div id="tribe-events-pg-template">
+        {{fn('tribe_events_before_html')}}
+        {{fn('tribe_get_view')}}
+        {{fn('tribe_events_after_html')}}
+    </div>
+{% endblock %}

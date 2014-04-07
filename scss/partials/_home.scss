@@ -1,0 +1,19 @@
+.home-banner {
+    background-color: $link-c;
+    color: $bgc;
+    box-shadow: inset 0 .25em .5em darken($link-c, 20%);
+}
+
+.home-widgets__widget__title {
+    font-family: $font-body;
+    font-weight: 200;
+    @include tp-fs(1);
+}
+
+.home-widgets {
+    .entry-title,
+    .widget__post-list__post__title
+     {
+        @extend .h4;
+    }
+}

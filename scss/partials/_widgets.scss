@@ -1,0 +1,28 @@
+.widget_archive,
+.widget_categories,
+.widget_pages,
+.widget_meta,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_rss,
+.widget_nav_menu {
+	ul {
+        @extend %scut-list-unstyled;
+
+        ul {
+            @include typecsset-space(padding-left, 1);
+        }
+    }
+}
+
+.widget {
+    ul, ol {
+		@extend %scut-list-unstyled;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.widgettitle {
+	@extend .h3;
+}

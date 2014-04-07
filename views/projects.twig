@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="all-projects">
+        {% for project in projects %}
+            {% if loop.index is divisibleby(2) %}
+                {% set class = 'even' %}
+            {% else %}
+                {% set class = 'odd' %}
+            {% endif %}
+            <article class="project-preview {{class}}">
+                <h1 class="project-preview__title"><a href="{{project.link}}">{{project.title}}</a></h1>
+                {% if project.thumbnail.src %}
+                    <a href="{{project.link}}"><img src="{{project.thumbnail.src|resize(1000,300)}}" alt="{{project.thumbnail.alt | default(project.thumbnail.project_title)}}" class="project-preview__image"></a>
+                {% endif %}
+                <p>{{project.get_preview(0, false, 'View Project')}}</p>
+            </article>
+        {% endfor %}
+    </div>
+{% endblock %}

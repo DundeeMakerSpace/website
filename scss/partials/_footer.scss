@@ -1,0 +1,32 @@
+.main-footer {
+    color: $footer-c;
+    background-color: $footer-bgc;
+
+    a {
+        color: $footer-link-c;
+        @include scut-selected(true) {
+            color: $footer-link-c--hover;
+        }
+    }
+}
+
+.footer-widgets {
+
+}
+
+.footer-social {
+    @include tp-fs(2);
+
+    .dev-share-buttons-link {
+        color: $footer-c;
+        margin-right: 0.5em;
+
+        @include scut-selected(true) {
+            color: $footer-link-c;
+        }
+    }
+}
+
+.footer-text {
+
+}

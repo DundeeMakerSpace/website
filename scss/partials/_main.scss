@@ -1,0 +1,32 @@
+// @include scut-reset-border-box;
+
+html, body {
+	-ms-overflow-x: hidden;
+	    overflow-x: hidden;
+    min-height: 100%;
+    background-color: $footer-bgc;
+}
+
+.main-wrapper {
+    background-color: $bgc;
+}
+
+::selection {
+    color: $bgc;
+    background-color: $link-c;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+	color: $link-c;
+    text-decoration: none;
+	@include transition(color $transition-fast);
+
+	&:hover, &:focus, &:active {
+		color: $link-c--hover;
+	}
+}

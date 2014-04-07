@@ -1,0 +1,34 @@
+<article class="{{post.post_class}}{% if is_archive %} post-preview{% endif %}">
+    {% block content %}
+        {% if is_archive %}
+            {# {{post|print_r}} #}
+            {% if post.thumbnail.src %}
+                <a href="{{post.link}}"><img src="{{post.thumbnail.src|resize(1000,300)}}" alt="{{post.thumbnail.alt | default(post.thumbnail.post_title)}}" class="post-preview__image"></a>
+            {% endif %}
+            {% if fn('get_post_format', post.ID) == 'status' %}
+                {# This is a status update #}
+                <div class="post-preview__status">
+                    <div class="post-preview__status__content">{{post.content}}</div>
+                    <span class="post-preview__status__time">{{post.post_date_gmt|time_ago}}</span>
+                </div>
+            {% else %}
+                {# This is a standard post #}
+                <h1 class="post-preview__title"><a href="{{post.link}}">{{post.title}}</a></h1>
+                <p>{{post.get_preview()}}</p>
+            {% endif %}
+        {% else %}
+            <header class="single-post__header{% if post.thumbnail.src %} has-bgimg{% endif %}" style="background-image: url({{post.thumbnail.src|resize(1920)}});">
+                {% if not title %}
+                <h1>
+                    {% if is_archive %}<a href="{{post.get_path}}">{% endif %}
+                        {{post.title}}
+                    {% if is_archive %}</a>{% endif %}
+                </h1>
+                {% endif %}
+            </header>
+            <div class="single-post__content">
+                {{post.content}}
+            </div>
+        {% endif %}
+    {% endblock %}
+</article>

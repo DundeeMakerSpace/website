@@ -1,0 +1,345 @@
+%tp-container {
+	@extend %scut-clearfix;
+	@include container;
+	padding-left: $grid-padding;
+	padding-right: $grid-padding;
+}
+
+@include global-box-sizing(border-box);
+
+.main-wrapper {
+}
+
+.main-header__inner {
+	@extend %tp-container;
+	@include tp-padding-leader(1);
+}
+
+.main-title {
+	@include breakpoint($mid-break, lt-ie9) {
+		float: left;
+	}
+}
+
+.button--donate {
+	@include breakpoint($mid-break, lt-ie9) {
+		float: right;
+		@include tp-leader(.5);
+	}
+}
+
+.main-content-sidebar-wrap {
+	@extend %tp-container;
+
+	body.home & {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.main-content {
+	@include breakpoint($mid-break) {
+		@include span($mid-content-cols of $mid-cols);
+	}
+	// @include breakpoint($large-break, lt-ie9) {
+	// 	@include span($large-content-cols of $large-cols);
+	// }
+}
+
+.main-aside {
+	@include breakpoint($mid-break) {
+		@include span($mid-sidebar-cols of $mid-cols);
+		@include omega;
+	}
+	// @include breakpoint($large-break, lt-ie9) {
+	// 	@include span($large-sidebar-cols of $large-cols);
+	// 	@include omega;
+	// }
+}
+
+.main-nav {
+	@include tp-trailer;
+	@include tp-padding-trailer;
+}
+
+.main-nav__ul {
+	@extend %scut-list-unstyled;
+	@extend %tp-container;
+	padding-left: $grid-padding;
+	padding-right: $grid-padding;
+	@include breakpoint($mid-break, lt-ie9) {
+		@include scut-list-inline;
+		padding-right: $grid-padding;
+		padding-left: $grid-padding;
+	}
+}
+
+.main-nav__li {
+	@include breakpoint($mid-break, lt-ie9) {
+		margin-right: 1em;
+	}
+}
+
+.sub-nav {
+	@extend %scut-list-unstyled;
+	@include breakpoint($mid-break, lt-ie9) {
+		position: absolute;
+		max-height: 0;
+		overflow: hidden;
+	}
+}
+
+.main-nav__li:hover > .sub-nav,
+.sub-nav:hover {
+	@include breakpoint($mid-break, lt-ie9) {
+		max-height: 99em;
+	}
+}
+
+.main-footer {
+	clear: both;
+	@include tp-padding-leader(2);
+	@include tp-padding-trailer(2);
+	@include tp-leader;
+}
+
+.main-footer__inner {
+	@extend %tp-container;
+}
+
+
+.footer-text {
+
+	p {
+		margin: 0;
+	}
+
+}
+
+// .footer-widgets-wrapper {
+// 	@include breakpoint($large-break, lt-ie9) {
+// 		display: table;
+// 		width: 100%;
+// 	}
+// }
+
+// .footer-widgets {
+// 	@include breakpoint($large-break, lt-ie9) {
+// 		display: table-cell;
+// 		padding-left: $grid-padding;
+// 		&:first-child {
+// 			padding-left: 0;
+// 		}
+// 	}
+// }
+
+// Home page
+
+.home-banner__inner {
+	@extend %tp-container;
+	@include tp-leader(-1);
+	@include tp-padding-leader(2);
+	@include tp-padding-trailer(2);
+}
+
+.home-banner__content {
+	margin-bottom: 0;
+}
+
+.home-widgets {
+	@extend %tp-container;
+	@include tp-padding-leader(2);
+	@include tp-padding-trailer(2);
+
+}
+
+.home-widgets__widget {
+	@include breakpoint($mid-break, lt-ie9) {
+		@include span($mid-cols / 3 of $mid-cols);
+	}
+
+	& + & + & {
+		@include breakpoint($mid-break, lt-ie9) {
+			@include omega;
+		}
+	}
+}
+
+
+// Donate Page
+
+.donate-options {
+	@extend %scut-clearfix;
+	@include tp-padding-leader(2);
+	@include tp-padding-trailer(2);
+	@include tp-trailer(2);
+}
+
+.donate-options__option {
+	position: relative;
+	@include tp-padding-trailer(2);
+	@include breakpoint($mid-break, lt-ie9) {
+		@include span($mid-cols / 2 of $mid-cols);
+	}
+
+	& + & {
+		@include omega;
+	}
+
+	.button {
+		@include breakpoint($mid-break, lt-ie9) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+
+// Page builder
+
+.page-template-template-builder-php {
+	.main-content-sidebar-wrap {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	main > header {
+		@extend %tp-container;
+	}
+}
+
+.block {
+	@extend %scut-clearfix;
+	@include tp-trailer(2);
+}
+
+.block__inner {
+	@extend %tp-container;
+}
+
+.block--highlight {
+	@extend .block;
+}
+
+.block--banner {
+	@extend .block;
+}
+
+.block--two-cols {
+	@extend .block;
+}
+
+.block__double-column {
+	@include tp-trailer(1);
+	@include breakpoint($mid-break, lt-ie9) {
+		@include span($mid-cols / 2 of $mid-cols);
+		@include tp-trailer(0);
+
+		&.even {
+			@include omega;
+		}
+	}
+}
+
+.block--three-cols {
+	@extend .block;
+}
+
+.block__triple-column {
+	@include tp-trailer(1);
+	@include breakpoint($mid-break, lt-ie9) {
+		@include tp-trailer(0);
+		@include span($mid-cols / 3 of $mid-cols);
+
+		&.third {
+			@include omega;
+		}
+	}
+}
+
+.block--separator {
+	@extend .block;
+	@include tp-leader(2);
+	@include tp-trailer(2);
+}
+
+
+// Single post
+
+.single-post {
+	.main-content-sidebar-wrap {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.single-post__content {
+	@extend %tp-container;
+}
+
+
+// Status update
+
+.post-preview__status__content {
+	float: left;
+	@include breakpoint($mid-break, lt-ie9) {
+		@include span($mid-cols - 3 of $mid-cols)
+	}
+}
+
+.post-preview__status__time {
+	float: right;
+	text-align: right;
+	@include breakpoint($mid-break, lt-ie9) {
+		@include span(last 3 of $mid-cols)
+	}
+}
+
+
+// Members
+
+.members-list {
+	@extend %scut-list-unstyled;
+	padding: 0;
+	margin: 0;
+}
+
+.member {
+	@extend %scut-clearfix;
+	@include tp-padding-leader(2);
+	@include tp-padding-trailer(2);
+	// &:last-child {
+	    // margin-bottom: 0;
+	// }
+}
+
+.member__image {
+	@include breakpoint($mid-break, lt-ie9) {
+		@include span($mid-cols / 3 of $mid-cols);
+	}
+}
+
+.member__content {
+	@include breakpoint($mid-break, lt-ie9) {
+		@include span(last $mid-cols / 3 * 2 of $mid-cols);
+	}
+}
+
+.project-preview {
+	@include breakpoint($mid-break, lt-ie9) {
+		@include span($mid-cols/2 of $mid-cols);
+
+		&.even {
+			@include omega;
+		}
+
+		&.odd {
+			clear: both;
+		}
+	}
+}

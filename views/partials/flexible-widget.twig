@@ -1,0 +1,15 @@
+{{before_widget}}
+    {# {{flexible_posts|print_r}} #}
+    {% if flexible_posts %}
+        <ul class="widget__post-list">
+            {% for post in flexible_posts %}
+                <li class="widget__post-list__post">
+                    <h2 class="widget__post-list__post__title">
+                        <a href="{{post.link}}">{{post.title}}</a>
+                    </h2>
+                    <p class="widget__post-list__post__excerpt">{{post.get_preview()}}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{{after_widget}}
