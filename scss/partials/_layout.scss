@@ -17,7 +17,7 @@
 
 .main-title {
 	text-align: center;
-	@include breakpoint($large-break, lt-ie9) {
+	@include breakpoint($large-break, '.lt-ie9') {
 		float: left;
 	}
 }
@@ -25,7 +25,7 @@
 .main-header__donate {
 	text-align: center;
 	@include tp-trailer();
-	@include breakpoint($large-break, lt-ie9) {
+	@include breakpoint($large-break, '.lt-ie9') {
 		float: right;
 		@include tp-leader(.5);
 	}
@@ -45,7 +45,7 @@
 	@include breakpoint($mid-break) {
 		@include span($mid-content-cols of $mid-cols);
 	}
-	// @include breakpoint($large-break, lt-ie9) {
+	// @include breakpoint($large-break, '.lt-ie9') {
 	// 	@include span($large-content-cols of $large-cols);
 	// }
 }
@@ -55,7 +55,7 @@
 		@include span($mid-sidebar-cols of $mid-cols);
 		@include omega;
 	}
-	// @include breakpoint($large-break, lt-ie9) {
+	// @include breakpoint($large-break, '.lt-ie9') {
 	// 	@include span($large-sidebar-cols of $large-cols);
 	// 	@include omega;
 	// }
@@ -71,7 +71,7 @@
 	@extend %tp-container;
 	padding-left: $grid-padding;
 	padding-right: $grid-padding;
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		// @include scut-list-inline;
 		padding-right: $grid-padding;
 		padding-left: $grid-padding;
@@ -79,14 +79,14 @@
 }
 
 .main-nav__li {
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		margin-right: 1em;
 	}
 }
 
 .sub-nav {
 	@extend %scut-list-unstyled;
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		position: absolute;
 		max-height: 0;
 		overflow: hidden;
@@ -95,7 +95,7 @@
 
 .main-nav__li:hover > .sub-nav,
 .sub-nav:hover {
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		max-height: 99em;
 	}
 }
@@ -121,14 +121,14 @@
 }
 
 // .footer-widgets-wrapper {
-// 	@include breakpoint($large-break, lt-ie9) {
+// 	@include breakpoint($large-break, '.lt-ie9') {
 // 		display: table;
 // 		width: 100%;
 // 	}
 // }
 
 // .footer-widgets {
-// 	@include breakpoint($large-break, lt-ie9) {
+// 	@include breakpoint($large-break, '.lt-ie9') {
 // 		display: table-cell;
 // 		padding-left: $grid-padding;
 // 		&:first-child {
@@ -158,12 +158,12 @@
 }
 
 .home-widgets__widget {
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include span($mid-cols / 3 of $mid-cols);
 	}
 
 	& + & + & {
-		@include breakpoint($mid-break, lt-ie9) {
+		@include breakpoint($mid-break, '.lt-ie9') {
 			@include omega;
 		}
 	}
@@ -182,7 +182,7 @@
 .donate-options__option {
 	position: relative;
 	@include tp-padding-trailer(2);
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include span($mid-cols / 2 of $mid-cols);
 	}
 
@@ -191,7 +191,7 @@
 	}
 
 	.button {
-		@include breakpoint($mid-break, lt-ie9) {
+		@include breakpoint($mid-break, '.lt-ie9') {
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -238,7 +238,7 @@
 
 .block__double-column {
 	@include tp-trailer(1);
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include span($mid-cols / 2 of $mid-cols);
 		@include tp-trailer(0);
 
@@ -254,7 +254,7 @@
 
 .block__triple-column {
 	@include tp-trailer(1);
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include tp-trailer(0);
 		@include span($mid-cols / 3 of $mid-cols);
 
@@ -290,7 +290,7 @@
 
 .post-preview__status__content {
 	float: left;
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include span($mid-cols - 3 of $mid-cols)
 	}
 }
@@ -298,7 +298,7 @@
 .post-preview__status__time {
 	float: right;
 	text-align: right;
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include span(last 3 of $mid-cols)
 	}
 }
@@ -322,19 +322,19 @@
 }
 
 .member__image {
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include span($mid-cols / 3 of $mid-cols);
 	}
 }
 
 .member__content {
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include span(last $mid-cols / 3 * 2 of $mid-cols);
 	}
 }
 
 .project-preview {
-	@include breakpoint($mid-break, lt-ie9) {
+	@include breakpoint($mid-break, '.lt-ie9') {
 		@include span($mid-cols/2 of $mid-cols);
 
 		&.even {

@@ -118,12 +118,12 @@
     @include tp-trailer(1);
     @include tp-padding-leader(1);
     @include tp-padding-trailer(1);
-    @include breakpoint($mid-break, lt-ie9) {
+    @include breakpoint($mid-break, '.lt-ie9') {
         @include tp-padding-leader(2);
         @include tp-padding-trailer(2);
     }
 
-    @include breakpoint($large-break, lt-ie9) {
+    @include breakpoint($large-break, '.lt-ie9') {
         @include tp-padding-leader(4);
         @include tp-padding-trailer(4);
     }
@@ -131,7 +131,7 @@
     h1 {
         margin: 0;
         color: $bgc;
-        @include breakpoint($large-break, lt-ie9) {
+        @include breakpoint($large-break, '.lt-ie9') {
             @include tp-fs(5);
         }
     }
