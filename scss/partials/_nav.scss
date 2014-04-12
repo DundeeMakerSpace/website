@@ -1,5 +1,9 @@
 .main-nav {
     border-bottom: 1px solid $border-c;
+    text-align: center;
+    @include breakpoint($large-break, lt-ie9) {
+        text-align: left;
+    }
 }
 
 .main-nav__ul {
@@ -11,9 +15,15 @@
 }
 
 .main-nav__a {
+    display: block;
+    padding: .4em;
     color: $nav-link-c;
     background: $nav-link-bg;
     font-weight: bold;
+
+    @include breakpoint($large-break, lt-ie9) {
+        padding: .2em 0;
+    }
 
     @include scut-selected(true) {
         color: $nav-link-c--hover;

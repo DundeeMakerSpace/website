@@ -16,13 +16,16 @@
 }
 
 .main-title {
-	@include breakpoint($mid-break, lt-ie9) {
+	text-align: center;
+	@include breakpoint($large-break, lt-ie9) {
 		float: left;
 	}
 }
 
-.button--donate {
-	@include breakpoint($mid-break, lt-ie9) {
+.main-header__donate {
+	text-align: center;
+	@include tp-trailer();
+	@include breakpoint($large-break, lt-ie9) {
 		float: right;
 		@include tp-leader(.5);
 	}
@@ -64,12 +67,12 @@
 }
 
 .main-nav__ul {
-	@extend %scut-list-unstyled;
+	@extend %scut-list-inline;
 	@extend %tp-container;
 	padding-left: $grid-padding;
 	padding-right: $grid-padding;
 	@include breakpoint($mid-break, lt-ie9) {
-		@include scut-list-inline;
+		// @include scut-list-inline;
 		padding-right: $grid-padding;
 		padding-left: $grid-padding;
 	}
