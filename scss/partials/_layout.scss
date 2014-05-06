@@ -158,11 +158,14 @@
 }
 
 .home-widgets__widget {
+	@include tp-trailer(2);
 	@include breakpoint($mid-break, '.lt-ie9') {
+		margin-bottom: 0;
 		@include span($mid-cols / 3 of $mid-cols);
 	}
 
 	& + & + & {
+		margin-bottom: 0;
 		@include breakpoint($mid-break, '.lt-ie9') {
 			@include omega;
 		}
