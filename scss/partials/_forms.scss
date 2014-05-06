@@ -56,6 +56,10 @@ input[type=submit] {
 $gravity-forms: true;
 
 @if ($gravity-forms) {
+    .gform_wrapper {
+        @include tp-trailer();
+    }
+
     .gform_fields {
         @extend %scut-list-unstyled;
         margin: 0;
@@ -79,12 +83,27 @@ $gravity-forms: true;
     .gfield_description {
         @include tp-leader(.5);
         font-size: 0.8em;
+        color: mix($bgc, $text-c, 20%);
     }
 
     .ginput_complex {
         border-bottom: 1px solid $border-c;
         border-top: 1px solid $border-c;
         @include tp-padding-leader();
+        @include tp-padding-trailer();
+    }
+
+    .gfield_checkbox {
+        @extend %scut-list-inline;
+        margin: 0;
+
+        & > li {
+            @include typecsset-space(margin-right, 1);
+        }
+
+        input {
+            margin-right: 0.3em;
+        }
     }
 
 
@@ -131,11 +150,24 @@ $gravity-forms: true;
         @include breakpoint($mid-break, '.lt-ie9') {
             .gfield_label {
                 @include span(3 of 10);
-                text-align: right;
+                // text-align: right;
                 margin-top: 0.3em;
             }
             .ginput_container {
                 @include span(last 7 of 10);
+            }
+            .gfield_checkbox {
+                margin-top: 0.3em;
+            }
+        }
+        @include breakpoint($large-break, '.lt-ie9') {
+            .gfield_label {
+                @include span(2 of 10);
+                // text-align: right;
+                margin-top: 0.3em;
+            }
+            .ginput_container {
+                @include span(last 8 of 10);
             }
         }
 
@@ -154,6 +186,16 @@ $gravity-forms: true;
                 @include span(7 of 10);
             }
         }
+    }
+
+    .ginput_left {
+        clear: left;
+        @include span(5 of 10);
+    }
+
+    .ginput_right {
+        clear: right;
+        @include span(last 5 of 10);
     }
 
     .large {
@@ -178,9 +220,36 @@ $gravity-forms: true;
             clear: both;
         }
 
+        input,
+        select,
+        textarea {
+            width: 100%;
+        }
+
+        input[type=radio],
+        input[type=checkbox] {
+            width: auto;
+        }
+    }
+
+    .gfield_list {
+        table-layout: auto;
+        width: 100%;
+    }
+
+    .gfield_list_cell {
+        padding: 0;
+        @include tp-padding-trailer(.5);
+
         input {
             width: 100%;
         }
+    }
+
+    .gfield_list_icons {
+        padding: 0;
+        text-align: right;
+        @include tp-padding-trailer(.5);
     }
 
     .ginput_full {
