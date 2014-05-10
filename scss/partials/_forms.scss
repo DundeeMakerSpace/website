@@ -93,7 +93,8 @@ $gravity-forms: true;
         @include tp-padding-trailer();
     }
 
-    .gfield_checkbox {
+    .gfield_checkbox,
+    .gfield_radio {
         @extend %scut-list-inline;
         margin: 0;
 
@@ -103,6 +104,20 @@ $gravity-forms: true;
 
         input {
             margin-right: 0.3em;
+        }
+
+        .highlight-select & input {
+            @include scut-hide-visually;
+        }
+
+        .highlight-select & input + label {
+            @include typecsset-space(padding, .5);
+            display: inline-block;
+            transition: all $transition-fast;
+        }
+
+        .highlight-select & input:checked + label {
+            box-shadow: 0 0 .5em $link-c;
         }
     }
 
