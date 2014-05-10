@@ -18,7 +18,7 @@ $font-body: $font-sans;
 $normalize_headings: false;
 
 $typecsset-base-font-size: 16px * $font-size;
-$typecsset-base-line-height: 16px * $line-height;
+$typecsset-base-line-height: $typecsset-base-font-size * $line-height;
 
 $typecsset-h1-size: ms(3, $typecsset-base-font-size);
 $typecsset-h2-size: ms(2, $typecsset-base-font-size);
