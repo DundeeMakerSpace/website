@@ -12,7 +12,13 @@
                 <header class="main-header" role='banner'>
                     <div class="main-header__inner">
                         <h1 class="main-title">
-                            <a href="{{bloginfo('url')}}" rel="home">{{bloginfo('name')}}</a>
+                            <a href="{{bloginfo('url')}}" rel="home">
+                                {% if logo %}
+                                    <img src="{{logo.src}}" alt="{{bloginfo('name')}}">
+                                {% else %}
+                                    {{bloginfo('name')}}
+                                {% endif %}
+                            </a>
                         </h1>
                         <div class="main-header__donate">
                             <a href="{{donate_page}}" class="button button--donate">Donate</a>

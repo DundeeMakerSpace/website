@@ -200,6 +200,11 @@ class TerminallyPixelatedBase {
 			$data['title'] = false;
 		}
 
+		// Logo
+		if ( $logo = get_theme_mod( 'terminally_pixelated_logo' ) ) {
+		    $data['logo'] = new TimberImage( $logo );
+		}
+
 		// Add breadcrumbs
 		if ( function_exists( 'yoast_breadcrumb' ) ) {
 			$data['breadcrumbs'] = yoast_breadcrumb('<nav id="breadcrumbs" class="main-breadcrumbs">','</nav>', false );
