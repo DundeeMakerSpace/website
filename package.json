@@ -12,7 +12,8 @@
     "grunt-csso": "~0.6.1",
     "matchdep": "~0.3.0",
     "grunt-bowercopy": "~1.0.0",
-    "grunt-contrib-requirejs": "~0.4.4"
+    "grunt-contrib-requirejs": "~0.4.4",
+    "grunt-favicons": "^0.6.4"
   },
   "repository": {
     "type": "git",

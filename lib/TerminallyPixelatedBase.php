@@ -205,6 +205,9 @@ class TerminallyPixelatedBase {
 		    $data['logo'] = new TimberImage( $logo );
 		}
 
+		// Icon path
+		$data['icon_path'] = TPHelpers::get_theme_resource_uri( '/icons/' );
+
 		// Add breadcrumbs
 		if ( function_exists( 'yoast_breadcrumb' ) ) {
 			$data['breadcrumbs'] = yoast_breadcrumb('<nav id="breadcrumbs" class="main-breadcrumbs">','</nav>', false );
