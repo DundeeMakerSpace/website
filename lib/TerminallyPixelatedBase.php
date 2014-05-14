@@ -109,6 +109,8 @@ class TerminallyPixelatedBase {
 		} else {
 			wp_enqueue_style( 'style', TPHelpers::get_theme_resource_uri( '/style.css' ), false, 0 );
 		}
+
+		wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Raleway:900,400,300', false, 0 );
 	}
 
 	public function add_scripts() {

@@ -9,8 +9,10 @@ $font-size: 1.4;
 $ms-base: $font-size;
 $line-height: ms($font-size, 1);
 
-$font-sans: "proxima-nova", Helvetica, Arial, sans-serif;
-$font-display: "jaf-facitweb", Helvetica, Arial, sans-serif;
+// $font-sans: "proxima-nova", Helvetica, Arial, sans-serif;
+$font-sans: "Raleway", Helvetica, Arial, sans-serif;
+// $font-display: "jaf-facitweb", Helvetica, Arial, sans-serif;
+$font-display: "Raleway", Helvetica, Arial, sans-serif;
 $font-serif: Georgia, serif;
 $font-h: $font-display;
 $font-body: $font-sans;

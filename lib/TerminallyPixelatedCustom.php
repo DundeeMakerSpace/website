@@ -5,7 +5,7 @@
 class TerminallyPixelatedCustom {
 
     function __construct() {
-        add_action( 'wp_footer', array( $this, 'typekit' ) );
+        // add_action( 'wp_footer', array( $this, 'typekit' ) );
         add_filter( 'timber_context', array( $this, 'donate_page' ) );
         add_action( 'after_setup_theme', array( $this, 'format_support' ) );
         add_action( 'admin_init', array( $this, 'editor_gravity_forms_access' ) );
