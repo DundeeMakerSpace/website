@@ -131,8 +131,10 @@
     h1 {
         margin: 0;
         color: $bgc;
+        font-family: $font-display;
+        font-weight: normal;
         @include breakpoint($large-break, '.lt-ie9') {
-            @include tp-fs(5);
+            @include tp-fs(4);
         }
     }
 

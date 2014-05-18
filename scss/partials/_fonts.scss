@@ -9,6 +9,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'dodge';
+    src: url('fonts/dodge-webfont.eot');
+    src: url('fonts/dodge-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dodge-webfont.woff') format('woff'),
+         url('fonts/dodge-webfont.ttf') format('truetype'),
+         url('fonts/dodge-webfont.svg#dodge') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 [class^="icon-"], [class*=" icon-"], %tp-icon {
     &:before {
         font-family: 'icomoon';
