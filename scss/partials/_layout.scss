@@ -17,7 +17,16 @@
 
 .main-title {
 	text-align: center;
+
+	img {
+		width: 100%;
+		display: block;
+	}
+
 	@include breakpoint($large-break, '.lt-ie9') {
+		img {
+			@include typecsset-space(max-width, 20);
+		}
 		float: left;
 	}
 }
@@ -27,7 +36,7 @@
 	@include tp-trailer();
 	@include breakpoint($large-break, '.lt-ie9') {
 		float: right;
-		@include tp-leader(.5);
+		@include tp-leader(.9);
 	}
 }
 
