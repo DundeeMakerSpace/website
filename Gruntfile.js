@@ -106,10 +106,11 @@ module.exports = function( grunt ) {
       options: {
         // Task-specific options go here.
         appleTouchBackgroundColor: '#FFFFFF',
-        tileColor: 'auto',
+        tileColor: '#FF702E',
         androidHomescreen: true,
         html: 'views/partials/head.twig',
-        HTMLPrefix: '{{icon_path}}'
+        HTMLPrefix: '{{icon_path}}',
+        trueColor: true,
       },
       your_target: {
         src: 'icons/icon.png',
