@@ -63,6 +63,8 @@ $grid-padding: 1em;
 // Colors
 
 $white: #FBFBFB;
+$grey: #a3a3a3;
+$dark-grey: #515252;
 $black: #24201F;
 $blue: #225C67;
 $dark-blue: #1F4F5C;
@@ -72,7 +74,7 @@ $light-green: #79D281;
 $orange: #FF702E;
 
 $bgc: $white;
-$text-c: darken($bgc, 60%);
+$text-c: $dark-grey;
 $border-c: darken($bgc, 20%);
 $error-c: $red;
 
