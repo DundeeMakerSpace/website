@@ -190,14 +190,15 @@ ul.tribe-events-sub-nav a:hover,
 a.tribe-events-ical,
 a.tribe-events-gcal {
     // font-size: 10px;
-    font-weight: normal;
-    padding: 0 6px;
+    // font-weight: normal;
+    // padding: 0 6px;
     float: right;
-    text-decoration: none;
+    // text-decoration: none;
     // line-height: 18px;
     margin-top: 21px;
-    color: #fff;
+    // color: #fff;
     clear: both;
+    @extend .button--boring;
 }
 .tribe-events-gcal {
     margin-right: 9px;
