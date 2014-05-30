@@ -158,6 +158,7 @@ class TerminallyPixelatedBase {
 
 	private function add_menus() {
 		register_nav_menu( 'main', 'The main site navigation' );
+		register_nav_menu( 'footer', 'The footer links' );
 	}
 
 	private function add_image_sizes() {
@@ -165,8 +166,9 @@ class TerminallyPixelatedBase {
 	}
 
 	public function timber_context( $data ) {
-		// Add menu
+		// Add menus
 		$data['main_menu'] = new TimberMenu( 'main' );
+		$data['footer_menu'] = new TimberMenu( 'footer' );
 
 		// Add sidebar
 		// $data['main_sidebar'] = Timber::get_widgets( 'main-sidebar' );

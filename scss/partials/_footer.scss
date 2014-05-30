@@ -27,6 +27,13 @@
     }
 }
 
-.footer-text {
-
+.main-footer__nav__a {
+    display: block;
+    padding: .4em 0;
+    @include breakpoint($mid-break, '.lt-ie9') {
+        padding: .5em;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
 }

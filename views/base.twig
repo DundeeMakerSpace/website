@@ -69,9 +69,7 @@
                     <section class="footer-social">
                         {{fn('the_dev_profile_links')}}
                     </section>
-                    {# <section class="footer-text">
-                        <p>Copyright  {{ 'now'|date('Y') }} {{bloginfo('name')}} | All Rights Reserved.</p>
-                    </section> #}
+                    {% include 'partials/nav.twig' with { 'nav_class': 'main-footer__nav', 'menu': footer_menu } %}
                 </div>
             </footer>
         </div>

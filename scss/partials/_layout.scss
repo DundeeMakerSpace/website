@@ -120,14 +120,33 @@
 	@extend %tp-container;
 }
 
-
-.footer-text {
-
-	p {
-		margin: 0;
+.footer-social {
+	@include breakpoint($mid-break, '.lt-ie9') {
+		@include span($mid-cols / 2 of $mid-cols);
 	}
-
 }
+
+.main-footer__nav__ul {
+	@extend %scut-list-unstyled;
+	padding: 0;
+	margin: 0;
+	@include tp-leader(1);
+	@include breakpoint($mid-break, '.lt-ie9') {
+		margin-top: 0;
+		text-align: right;
+		@include scut-list-inline;
+		@include span(last $mid-cols / 2 of $mid-cols);
+	}
+}
+
+
+// .footer-text {
+
+// 	p {
+// 		margin: 0;
+// 	}
+
+// }
 
 // .footer-widgets-wrapper {
 // 	@include breakpoint($large-break, '.lt-ie9') {
