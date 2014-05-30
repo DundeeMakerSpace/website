@@ -114,7 +114,7 @@ class TerminallyPixelatedBase {
 	}
 
 	public function add_scripts() {
-		wp_enqueue_script( 'require', TPHelpers::get_theme_resource_uri( 'js/vendor/require.js' ), array( 'jquery' ) , 1, true );
+		// wp_enqueue_script( 'require', TPHelpers::get_theme_resource_uri( 'js/vendor/require.js' ), array( 'jquery' ) , 1, true );
 	}
 
 	function add_require_attributes( $good_protocol_url, $original_url, $_context ) {
