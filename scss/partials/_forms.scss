@@ -39,9 +39,17 @@ textarea {
     @extend %input;
 }
 
+input[type=image] {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
 button,
 .button,
-input[type=submit] {
+input[type=submit],
+input[type=button] {
     @extend %button;
 }
 

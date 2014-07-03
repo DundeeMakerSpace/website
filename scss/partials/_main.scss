@@ -30,3 +30,21 @@ a {
 		color: $link-c--hover;
 	}
 }
+
+table {
+    background: transparent;
+    background-color: shade($bgc, 5%);
+}
+
+thead {
+    background-color: shade($bgc, 10%);
+}
+
+tr:nth-child(even) {
+    background-color: shade($bgc, 1%);
+}
+
+th {
+    text-align: left;
+    border-bottom: 1px solid $border-c;
+}

@@ -1,0 +1,68 @@
+#pmpro_levels_table {
+    @extend table;
+}
+
+.pmpro_checkout tr.odd td {
+    background: none;
+}
+
+.pmpro_checkout {
+    background: none;
+}
+
+.pmpro_asterisk {
+    display: none;
+    // color: $error-c;
+    // margin-left: 0.2em;
+    // font-size: 2em;
+    // line-height: 0;
+}
+
+form.pmpro_form label {
+    width: 100%;
+    font-weight: normal;
+    margin: 0;
+    clear: both;
+    text-align: left;
+    @include tp-trailer(.5);
+    @include breakpoint($mid-break, '.lt-ie9') {
+        text-align: right;
+        @include span(4 of $mid-cols);
+    }
+}
+
+form.pmpro_form .input,
+form.pmpro_form select {
+    width: 100%;
+    margin: 0;
+    @include tp-trailer(.5);
+    @include breakpoint($mid-break, '.lt-ie9') {
+        @include span(last $mid-cols - 4 of $mid-cols);
+    }
+}
+
+form.pmpro_form .input,
+form.pmpro_form textarea,
+.input,
+form.pmpro_form select {
+    @extend %input;
+}
+
+body .pmpro_btn,
+body .pmpro_btn:link {
+    @extend %button;
+    @include tp-fs(-1);
+}
+
+.pmpro_thead-msg {
+    white-space: normal;
+    float: none;
+    @include breakpoint($mid-break, '.lt-ie9') {
+        float: right;
+    }
+}
+
+// Don't need these payment fields
+#pmpro_payment_information_fields {
+    display: none;
+}
