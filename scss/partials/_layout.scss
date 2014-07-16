@@ -377,3 +377,9 @@
 		}
 	}
 }
+
+.postmeta {
+	@extend %tp-container;
+	@include tp-leader(2);
+	@include tp-trailer(1);
+}

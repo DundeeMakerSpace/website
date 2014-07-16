@@ -238,3 +238,17 @@
 .single-project__contributors {
     @include tp-leader(2);
 }
+
+// Post meta
+
+.postmeta {
+    font-style: italic;
+    color: lighten($text-c, 30%);
+
+    a {
+        color: lighten($link-c, 10%);
+        @include scut-selected(true) {
+            color: $link-c--hover;
+        }
+    }
+}

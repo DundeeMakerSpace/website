@@ -313,3 +313,38 @@ $gravity-forms: true;
     }
 
 }
+
+// Login form
+
+#loginform {
+    label {
+        display: block;
+        @include tp-trailer(.25);
+    }
+
+    p {
+        @include tp-trailer(.5);
+    }
+
+    .input {
+        display: block;
+        width: 100%;
+    }
+}
+
+.page-template-template-login-php {
+    .main-content--full-width {
+        max-width: 20em;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid $border-c;
+        border-radius: .3em;
+        background-color: lighten($bgc, 1%);
+        box-shadow: 0 0 .4em rgba(0,0,0,.2);
+        @include typecsset-space(padding, 1);
+
+        .posttitle {
+            text-align: center;
+        }
+    }
+}

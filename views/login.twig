@@ -1,0 +1,9 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    {% if logged_in %}
+        {{post.content}}
+    {% else %}
+        {{fn('wp_login_form')}}
+    {% endif %}
+{% endblock %}
