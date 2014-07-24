@@ -17,7 +17,7 @@
             </div>
             {% if contributors %}
                 <footer class="single-project__contributors">
-                    <h3 class="contibutors-list__title">Contributors</h3>
+                    <h3 class="contibutors-list__title">Makers</h3>
                     <ul class="contributors-list">
                         {% for contributor in contributors %}
                             <li class="contributor-list__contibutor"><a href="{{fn('get_author_posts_url', contributor.data.ID)}}">{{contributor.data.display_name}}</a></li>
