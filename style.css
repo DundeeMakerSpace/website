@@ -252,7 +252,7 @@ textarea {
 }
 
 /* line 522, scss/vendor/_normalize.scss */
-table {
+table, #pmpro_levels_table {
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -273,14 +273,14 @@ table {
  */
 /* line 100, scss/vendor/_typecsset.scss */
 h1, .h1, h2, .h2, h3, .h3, .widgettitle, .project-preview__title, h4, .h4, .home-widgets .entry-title,
-.home-widgets .widget__post-list__post__title, h5, .h5, h6, .h6, ul, ol, dd, p, address, pre, blockquote, table {
+.home-widgets .widget__post-list__post__title, h5, .h5, h6, .h6, ul, ol, dd, p, address, pre, blockquote, table, #pmpro_levels_table {
   margin: 0;
   padding: 0;
 }
 
 /* line 105, scss/vendor/_typecsset.scss */
 h1, .h1, h2, .h2, h3, .h3, .widgettitle, .project-preview__title, h4, .h4, .home-widgets .entry-title,
-.home-widgets .widget__post-list__post__title, h5, .h5, h6, .h6, ul, ol, dd, p, address, pre, blockquote, table {
+.home-widgets .widget__post-list__post__title, h5, .h5, h6, .h6, ul, ol, dd, p, address, pre, blockquote, table, #pmpro_levels_table {
   margin-bottom: 33.50906px;
   margin-bottom: 1.49594rem;
 }
@@ -469,7 +469,7 @@ q:first-child {
  * Crude table styles; tables are very difficult to keep on the baseline.
  */
 /* line 342, scss/vendor/_typecsset.scss */
-table {
+table, #pmpro_levels_table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
@@ -488,7 +488,7 @@ td {
 * Docs at http://davidtheclark.github.io/scut
 */
 /* line 10, scss/vendor/_scut.scss */
-.main-header__inner:after, .main-content-sidebar-wrap:after, .main-nav__ul:after, .main-footer__inner:after, .home-banner__inner:after, .home-widgets:after, .page-template-template-builder-php main > header:after, .block__inner:after, .single-post__content:after, .donate-options:after, .block:after, .block--highlight:after, .block--banner:after, .block--two-cols:after, .block--three-cols:after, .block--separator:after, .member:after, .comment:after, .gfield:after, .ginput_complex:after, .ginput_full:after {
+.main-header__inner:after, .main-content-sidebar-wrap:after, .main-nav__ul:after, .main-footer__inner:after, .home-banner__inner:after, .home-widgets:after, .page-template-template-builder-php main > header:after, .block__inner:after, .single-post__content:after, .single-project__content:after, .single-project__contributors:after, .postmeta:after, .donate-options:after, .block:after, .block--highlight:after, .block--banner:after, .block--two-cols:after, .block--three-cols:after, .block--separator:after, .member:after, .comment:after, .gfield:after, .ginput_complex:after, .ginput_full:after {
   content: "";
   display: table;
   clear: both;
@@ -523,7 +523,7 @@ td {
 
 /* line 822, scss/vendor/_scut.scss */
 .main-nav__ul, .pagination__ul, .gfield_checkbox,
-.gfield_radio {
+.gfield_radio, .listing-table .pagination ul {
   list-style-type: none;
   padding-left: 0;
   margin-top: 0;
@@ -531,7 +531,7 @@ td {
 }
 /* line 810, scss/vendor/_scut.scss */
 .main-nav__ul > li, .pagination__ul > li, .gfield_checkbox > li,
-.gfield_radio > li {
+.gfield_radio > li, .listing-table .pagination ul > li {
   display: inline-block;
 }
 
@@ -798,6 +798,16 @@ td {
   content: "\e621";
 }
 
+/* line 275, scss/partials/_fonts.scss */
+.icon-search-outline:before {
+  content: "\e60c";
+}
+
+/* line 280, scss/partials/_fonts.scss */
+.icon-search:before {
+  content: "\f002";
+}
+
 /* line 344, scss/vendor/_scut.scss */
 body {
   -webkit-font-smoothing: antialiased;
@@ -835,8 +845,25 @@ p:last-child {
   margin-bottom: 0;
 }
 
+/* line 48, scss/partials/_typography.scss */
+blockquote {
+  color: #848585;
+  font-style: italic;
+  border-left: 4px solid #c8c8c8;
+  padding-left: 33.50906px;
+  padding-left: 1.49594rem;
+  margin-left: 33.50906px;
+  margin-left: 1.49594rem;
+  margin-bottom: 33.50906px;
+  margin-bottom: 1.49594rem;
+  padding-bottom: 16.75453px;
+  padding-bottom: 0.74797rem;
+  padding-top: 16.75453px;
+  padding-top: 0.74797rem;
+}
+
 /* line 1, scss/partials/_layout.scss */
-.main-header__inner, .main-content-sidebar-wrap, .main-nav__ul, .main-footer__inner, .home-banner__inner, .home-widgets, .page-template-template-builder-php main > header, .block__inner, .single-post__content {
+.main-header__inner, .main-content-sidebar-wrap, .main-nav__ul, .main-footer__inner, .home-banner__inner, .home-widgets, .page-template-template-builder-php main > header, .block__inner, .single-post__content, .single-project__content, .single-project__contributors, .postmeta {
   max-width: 46em;
   margin-left: auto;
   margin-right: auto;
@@ -844,7 +871,7 @@ p:last-child {
   padding-right: 1em;
 }
 /* line 12, scss/vendor/susy/output/support/_clearfix.scss */
-.main-header__inner:after, .main-content-sidebar-wrap:after, .main-nav__ul:after, .main-footer__inner:after, .home-banner__inner:after, .home-widgets:after, .page-template-template-builder-php main > header:after, .block__inner:after, .single-post__content:after {
+.main-header__inner:after, .main-content-sidebar-wrap:after, .main-nav__ul:after, .main-footer__inner:after, .home-banner__inner:after, .home-widgets:after, .page-template-template-builder-php main > header:after, .block__inner:after, .single-post__content:after, .single-project__content:after, .single-project__contributors:after, .postmeta:after {
   content: " ";
   display: block;
   clear: both;
@@ -1174,12 +1201,19 @@ body.home .main-content-sidebar-wrap {
   padding-right: 0;
 }
 
-/* line 322, scss/partials/_layout.scss */
+/* line 323, scss/partials/_layout.scss */
+.single-projects .main-content-sidebar-wrap {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 341, scss/partials/_layout.scss */
 .post-preview__status__content {
   float: left;
 }
 @media (min-width: 30em) {
-  /* line 322, scss/partials/_layout.scss */
+  /* line 341, scss/partials/_layout.scss */
   .post-preview__status__content {
     width: 73.52941%;
     float: left;
@@ -1187,13 +1221,13 @@ body.home .main-content-sidebar-wrap {
   }
 }
 
-/* line 329, scss/partials/_layout.scss */
+/* line 348, scss/partials/_layout.scss */
 .post-preview__status__time {
   float: right;
   text-align: right;
 }
 @media (min-width: 30em) {
-  /* line 329, scss/partials/_layout.scss */
+  /* line 348, scss/partials/_layout.scss */
   .post-preview__status__time {
     width: 20.58824%;
     float: right;
@@ -1201,13 +1235,13 @@ body.home .main-content-sidebar-wrap {
   }
 }
 
-/* line 340, scss/partials/_layout.scss */
+/* line 359, scss/partials/_layout.scss */
 .members-list {
   padding: 0;
   margin: 0;
 }
 
-/* line 346, scss/partials/_layout.scss */
+/* line 365, scss/partials/_layout.scss */
 .member {
   padding-top: 67.01812px;
   padding-top: 2.99188rem;
@@ -1216,7 +1250,7 @@ body.home .main-content-sidebar-wrap {
 }
 
 @media (min-width: 30em) {
-  /* line 355, scss/partials/_layout.scss */
+  /* line 374, scss/partials/_layout.scss */
   .member__image {
     width: 29.41176%;
     float: left;
@@ -1225,7 +1259,7 @@ body.home .main-content-sidebar-wrap {
 }
 
 @media (min-width: 30em) {
-  /* line 361, scss/partials/_layout.scss */
+  /* line 380, scss/partials/_layout.scss */
   .member__content {
     width: 64.70588%;
     float: right;
@@ -1234,21 +1268,29 @@ body.home .main-content-sidebar-wrap {
 }
 
 @media (min-width: 30em) {
-  /* line 367, scss/partials/_layout.scss */
+  /* line 386, scss/partials/_layout.scss */
   .project-preview {
     width: 47.05882%;
     float: left;
     margin-right: 5.88235%;
   }
-  /* line 371, scss/partials/_layout.scss */
+  /* line 390, scss/partials/_layout.scss */
   .project-preview.even {
     float: right;
     margin-right: 0;
   }
-  /* line 375, scss/partials/_layout.scss */
+  /* line 394, scss/partials/_layout.scss */
   .project-preview.odd {
     clear: both;
   }
+}
+
+/* line 400, scss/partials/_layout.scss */
+.postmeta {
+  margin-top: 67.01812px;
+  margin-top: 2.99188rem;
+  margin-bottom: 33.50906px;
+  margin-bottom: 1.49594rem;
 }
 
 /* line 3, scss/partials/_main.scss */
@@ -1290,6 +1332,34 @@ a {
 /* line 29, scss/partials/_main.scss */
 a:hover, a:focus, a:active {
   color: #e04848;
+}
+
+/* line 34, scss/partials/_main.scss */
+table, #pmpro_levels_table {
+  background: transparent;
+  background-color: #eeeeee;
+}
+
+/* line 39, scss/partials/_main.scss */
+thead {
+  background-color: #e1e1e1;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+/* line 44, scss/partials/_main.scss */
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* line 48, scss/partials/_main.scss */
+th {
+  text-align: left;
+}
+
+/* line 52, scss/partials/_main.scss */
+tfoot {
+  background-color: #e1e1e1;
+  border-top: 1px solid #c8c8c8;
 }
 
 /* line 1, scss/partials/_wordpress-defaults.scss */
@@ -1758,11 +1828,17 @@ a img.aligncenter {
 /* line 1, scss/partials/_home.scss */
 .home-banner {
   background-color: #ff702e;
+  background-image: url('img/banner-bg.jpg?1406229169');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #fbfbfb;
-  box-shadow: inset 0 0.25em 0.5em #c73f00;
+  box-shadow: inset 0 0.25em 0.5em rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4);
 }
 
-/* line 7, scss/partials/_home.scss */
+/* line 13, scss/partials/_home.scss */
 .home-widgets__widget__title {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 200;
@@ -2653,7 +2729,7 @@ select.tribe-events-dropdown {
 =============================================*/
 /* Global Calendar Styles */
 /* line 866, scss/partials/_events.scss */
-#tribe-events-content table.tribe-events-calendar {
+#tribe-events-content table.tribe-events-calendar, #tribe-events-content .tribe-events-calendar#pmpro_levels_table {
   margin-top: 33.50906px;
   margin-top: 1.49594rem;
   margin-bottom: 33.50906px;
@@ -2665,7 +2741,7 @@ select.tribe-events-dropdown {
 }
 
 /* line 876, scss/partials/_events.scss */
-#tribe-events-content table.tribe-events-calendar,
+#tribe-events-content table.tribe-events-calendar, #tribe-events-content .tribe-events-calendar#pmpro_levels_table,
 #tribe-events-content .tribe-events-calendar td {
   border: 1px solid #bbb;
 }
@@ -2780,14 +2856,14 @@ select.tribe-events-dropdown {
 
 /* Large Calendar Specifics */
 /* line 974, scss/partials/_events.scss */
-.events-archive.events-gridview #tribe-events-content table .vevent {
+.events-archive.events-gridview #tribe-events-content table .vevent, .events-archive.events-gridview #tribe-events-content #pmpro_levels_table .vevent {
   margin: 0 5%;
   padding: 6px 8px;
   border-bottom: 1px solid #e7e7e7;
 }
 
 /* line 979, scss/partials/_events.scss */
-.events-archive.events-gridview #tribe-events-content table .tribe-events-last {
+.events-archive.events-gridview #tribe-events-content table .tribe-events-last, .events-archive.events-gridview #tribe-events-content #pmpro_levels_table .tribe-events-last {
   border-bottom: 0;
 }
 
@@ -2907,7 +2983,7 @@ select.tribe-events-dropdown {
 /* = WooTickets
 =============================================*/
 /* line 1081, scss/partials/_events.scss */
-table.tribe-events-tickets .tickets_price {
+table.tribe-events-tickets .tickets_price, .tribe-events-tickets#pmpro_levels_table .tickets_price {
   font-style: italic;
   color: #000;
   font-weight: bold;
@@ -2928,14 +3004,14 @@ td.tickets_name {
 }
 
 /* line 1100, scss/partials/_events.scss */
-table.tribe-events-tickets {
+table.tribe-events-tickets, .tribe-events-tickets#pmpro_levels_table {
   margin: 0;
   width: 100%;
   border-bottom: 0;
 }
 
 /* line 1106, scss/partials/_events.scss */
-table.tribe-events-tickets td {
+table.tribe-events-tickets td, .tribe-events-tickets#pmpro_levels_table td {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: 8px 10px 8px 0;
@@ -2943,24 +3019,24 @@ table.tribe-events-tickets td {
 }
 
 /* line 1117, scss/partials/_events.scss */
-table.tribe-events-tickets td.woocommerce {
+table.tribe-events-tickets td.woocommerce, .tribe-events-tickets#pmpro_levels_table td.woocommerce {
   border-bottom: 0;
 }
 
 /* line 1121, scss/partials/_events.scss */
-table.tribe-events-tickets td.wpec img {
+table.tribe-events-tickets td.wpec img, .tribe-events-tickets#pmpro_levels_table td.wpec img {
   display: none;
 }
 
 /* line 1125, scss/partials/_events.scss */
-table.tribe-events-tickets td fieldset {
+table.tribe-events-tickets td fieldset, .tribe-events-tickets#pmpro_levels_table td fieldset {
   padding: 14px 0.625em 4px;
   border: 0;
   margin-top: 8px;
 }
 
 /* line 1131, scss/partials/_events.scss */
-table.tribe-events-tickets .tickets_nostock {
+table.tribe-events-tickets .tickets_nostock, .tribe-events-tickets#pmpro_levels_table .tickets_nostock {
   display: inline-block;
   text-align: center;
 }
@@ -2983,7 +3059,8 @@ h2.tribe-events-tickets-title, .tribe-events-tickets-title.h2 {
 
 /* line 1151, scss/partials/_events.scss */
 .datepicker td,
-.datepicker table tr td span {
+.datepicker table tr td span,
+.datepicker #pmpro_levels_table tr td span {
   border-radius: 0;
 }
 
@@ -2993,14 +3070,16 @@ h2.tribe-events-tickets-title, .tribe-events-tickets-title.h2 {
 }
 
 /* line 1161, scss/partials/_events.scss */
-.datepicker table tr td.active.active,
-.datepicker table tr td span.active.active {
+.datepicker table tr td.active.active, .datepicker #pmpro_levels_table tr td.active.active,
+.datepicker table tr td span.active.active,
+.datepicker #pmpro_levels_table tr td span.active.active {
   background: #666;
 }
 
 /* line 1165, scss/partials/_events.scss */
-.datepicker table tr td.active.active:hover,
-.datepicker table tr td span.active.active:hover {
+.datepicker table tr td.active.active:hover, .datepicker #pmpro_levels_table tr td.active.active:hover,
+.datepicker table tr td span.active.active:hover,
+.datepicker #pmpro_levels_table tr td span.active.active:hover {
   background: #DADADA;
   color: inherit;
 }
@@ -4456,7 +4535,7 @@ input.print, input.email, a.export {
   /* = WooTickets
   =============================================*/
   /* line 2393, scss/partials/_events.scss */
-  table.tribe-events-tickets .tickets_price {
+  table.tribe-events-tickets .tickets_price, .tribe-events-tickets#pmpro_levels_table .tickets_price {
     display: block;
     padding-top: 0;
     padding-bottom: 6px;
@@ -4469,19 +4548,20 @@ input.print, input.email, a.export {
   }
 
   /* line 2408, scss/partials/_events.scss */
-  table.tribe-events-tickets td.tickets_description {
+  table.tribe-events-tickets td.tickets_description, .tribe-events-tickets#pmpro_levels_table td.tickets_description {
     padding-top: 0;
     padding-left: 0;
   }
 
   /* line 2413, scss/partials/_events.scss */
-  table.tribe-events-tickets,
-  table.tribe-events-tickets tbody {
+  table.tribe-events-tickets, .tribe-events-tickets#pmpro_levels_table,
+  table.tribe-events-tickets tbody,
+  .tribe-events-tickets#pmpro_levels_table tbody {
     display: block;
   }
 
   /* line 2418, scss/partials/_events.scss */
-  table.tribe-events-tickets tr {
+  table.tribe-events-tickets tr, .tribe-events-tickets#pmpro_levels_table tr {
     display: block;
     border-top: 1px solid #ddd;
     padding-top: 10px;
@@ -4489,13 +4569,13 @@ input.print, input.email, a.export {
   }
 
   /* line 2425, scss/partials/_events.scss */
-  table.tribe-events-tickets td {
+  table.tribe-events-tickets td, .tribe-events-tickets#pmpro_levels_table td {
     display: inline-block;
     border: 0;
   }
 
   /* line 2430, scss/partials/_events.scss */
-  table.tribe-events-tickets td.woocommerce {
+  table.tribe-events-tickets td.woocommerce, .tribe-events-tickets#pmpro_levels_table td.woocommerce {
     border-bottom: 0;
   }
 }
@@ -4570,7 +4650,10 @@ input[type="reset"]::-moz-focus-inner {
 /* line 5, scss/partials/_forms.scss */
 input,
 select,
-textarea {
+textarea, form.pmpro_form .input,
+form.pmpro_form textarea,
+.input,
+form.pmpro_form select {
   max-width: 100%;
   font-size: 1em;
   padding: 0.3em 0.5em;
@@ -4587,7 +4670,10 @@ textarea {
 /* line 14, scss/partials/_forms.scss */
 input:hover,
 select:hover,
-textarea:hover {
+textarea:hover, form.pmpro_form .input:hover,
+form.pmpro_form textarea:hover,
+.input:hover,
+form.pmpro_form select:hover {
   color: #737474;
   background: #eeeeee;
   border: 1px solid #225c67;
@@ -4595,9 +4681,15 @@ textarea:hover {
 /* line 20, scss/partials/_forms.scss */
 input:focus,
 select:focus,
-textarea:focus, input:active,
+textarea:focus, form.pmpro_form .input:focus,
+form.pmpro_form textarea:focus,
+.input:focus,
+form.pmpro_form select:focus, input:active,
 select:active,
-textarea:active {
+textarea:active, form.pmpro_form .input:active,
+form.pmpro_form textarea:active,
+.input:active,
+form.pmpro_form select:active {
   color: #515252;
   background: #fbfbfb;
   border: 1px solid #225c67;
@@ -4606,7 +4698,9 @@ textarea:active {
 /* line 30, scss/partials/_forms.scss */
 button,
 .button,
-input[type=submit] {
+input[type=submit],
+input[type=button], body .pmpro_btn,
+body .pmpro_btn:link {
   max-width: 100%;
   text-align: center;
   font-size: 1em;
@@ -4623,27 +4717,32 @@ input[type=submit] {
 /* line 15, scss/vendor/sassy-buttons/sassy-buttons/_sassy-button-pseudo-states.sass */
 button:hover,
 .button:hover,
-input[type=submit]:hover {
+input[type=submit]:hover,
+input[type=button]:hover, body .pmpro_btn:hover {
   text-decoration: none;
 }
 /* line 42, scss/vendor/sassy-buttons/sassy-buttons/_sassy-button-pseudo-states.sass */
 button:hover,
 .button:hover,
-input[type=submit]:hover {
+input[type=submit]:hover,
+input[type=button]:hover, body .pmpro_btn:hover {
   background-color: #ff5f15;
 }
 /* line 44, scss/vendor/sassy-buttons/sassy-buttons/_sassy-button-pseudo-states.sass */
 button:active,
 .button:active,
-input[type=submit]:active {
+input[type=submit]:active,
+input[type=button]:active, body .pmpro_btn:active {
   background-color: #ff5405;
 }
 /* line 6, scss/vendor/sassy-buttons/sassy-buttons/_sassy-button-pseudo-states.sass */
 button.disabled,
 .disabled.button,
-input.disabled[type=submit], button[disabled],
+input.disabled[type=submit],
+input.disabled[type=button], body .disabled.pmpro_btn, button[disabled],
 [disabled].button,
-input[disabled][type=submit] {
+input[disabled][type=submit],
+input[disabled][type=button], body [disabled].pmpro_btn {
   opacity: 0.6;
   background: false;
   cursor: default;
@@ -4652,12 +4751,22 @@ input[disabled][type=submit] {
 /* line 73, scss/vendor/sassy-buttons/_sassy-buttons.sass */
 button::-moz-focus-inner,
 .button::-moz-focus-inner,
-input[type=submit]::-moz-focus-inner {
+input[type=submit]::-moz-focus-inner,
+input[type=button]::-moz-focus-inner, body .pmpro_btn::-moz-focus-inner,
+body .pmpro_btn:link::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
 }
 
-/* line 48, scss/partials/_forms.scss */
+/* line 42, scss/partials/_forms.scss */
+input[type=image] {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 56, scss/partials/_forms.scss */
 .button--boring, a.tribe-events-ical,
 a.tribe-events-gcal, .project-preview .read-more {
   font-size: 1em;
@@ -4702,7 +4811,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   margin: -1px !important;
 }
 
-/* line 52, scss/partials/_forms.scss */
+/* line 60, scss/partials/_forms.scss */
 .button--dark, .block--banner button,
 .block--banner input[type=submit]
 .button {
@@ -4754,38 +4863,38 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   margin: -1px !important;
 }
 
-/* line 59, scss/partials/_forms.scss */
+/* line 67, scss/partials/_forms.scss */
 .gform_wrapper {
   margin-bottom: 33.50906px;
   margin-bottom: 1.49594rem;
 }
 
-/* line 63, scss/partials/_forms.scss */
+/* line 71, scss/partials/_forms.scss */
 .gform_fields {
   margin: 0;
   padding: 0;
 }
 
-/* line 69, scss/partials/_forms.scss */
+/* line 77, scss/partials/_forms.scss */
 .gfield {
   margin-bottom: 33.50906px;
   margin-bottom: 1.49594rem;
 }
 
-/* line 73, scss/partials/_forms.scss */
+/* line 81, scss/partials/_forms.scss */
 .gfield_label {
   display: inline-block;
   margin-bottom: 16.75453px;
   margin-bottom: 0.74797rem;
 }
 
-/* line 78, scss/partials/_forms.scss */
+/* line 86, scss/partials/_forms.scss */
 .gfield_required {
   color: #e04848;
   margin-left: 0.2em;
 }
 
-/* line 83, scss/partials/_forms.scss */
+/* line 91, scss/partials/_forms.scss */
 .gfield_description {
   margin-top: 16.75453px;
   margin-top: 0.74797rem;
@@ -4793,7 +4902,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   color: #737373;
 }
 
-/* line 89, scss/partials/_forms.scss */
+/* line 97, scss/partials/_forms.scss */
 .ginput_complex {
   border-bottom: 1px solid #c8c8c8;
   border-top: 1px solid #c8c8c8;
@@ -4803,23 +4912,23 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   padding-bottom: 1.49594rem;
 }
 
-/* line 96, scss/partials/_forms.scss */
+/* line 104, scss/partials/_forms.scss */
 .gfield_checkbox,
 .gfield_radio {
   margin: 0;
 }
-/* line 101, scss/partials/_forms.scss */
+/* line 109, scss/partials/_forms.scss */
 .gfield_checkbox > li,
 .gfield_radio > li {
   margin-right: 33.50906px;
   margin-right: 1.49594rem;
 }
-/* line 105, scss/partials/_forms.scss */
+/* line 113, scss/partials/_forms.scss */
 .gfield_checkbox input,
 .gfield_radio input {
   margin-right: 0.3em;
 }
-/* line 109, scss/partials/_forms.scss */
+/* line 117, scss/partials/_forms.scss */
 .highlight-select .gfield_checkbox input, .highlight-select
 .gfield_radio input {
   border: 0;
@@ -4831,7 +4940,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   position: absolute;
   width: 1px;
 }
-/* line 113, scss/partials/_forms.scss */
+/* line 121, scss/partials/_forms.scss */
 .highlight-select .gfield_checkbox input + label, .highlight-select
 .gfield_radio input + label {
   padding: 16.75453px;
@@ -4840,13 +4949,13 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 119, scss/partials/_forms.scss */
+/* line 127, scss/partials/_forms.scss */
 .highlight-select .gfield_checkbox input:checked + label, .highlight-select
 .gfield_radio input:checked + label {
   box-shadow: 0 0 0.5em #ff702e;
 }
 
-/* line 127, scss/partials/_forms.scss */
+/* line 135, scss/partials/_forms.scss */
 .validation_error, .gfield_error .gfield_description.validation_message, .gfield_creditcard_warning_message {
   display: block;
   background-color: #e04848;
@@ -4858,13 +4967,13 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   margin-bottom: 1.49594rem;
 }
 
-/* line 138, scss/partials/_forms.scss */
+/* line 146, scss/partials/_forms.scss */
 .gfield_error .gfield_description.validation_message {
   margin-bottom: 0;
   margin-top: 0.2em;
   font-size: 0.8em;
 }
-/* line 145, scss/partials/_forms.scss */
+/* line 153, scss/partials/_forms.scss */
 .gfield_error input,
 .gfield_error select,
 .gfield_error textarea {
@@ -4872,53 +4981,53 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
 }
 
 @media (min-width: 30em) {
-  /* line 166, scss/partials/_forms.scss */
+  /* line 174, scss/partials/_forms.scss */
   .left_label .gfield_label {
     width: 25%;
     float: left;
     margin-right: 7.14286%;
     margin-top: 0.3em;
   }
-  /* line 171, scss/partials/_forms.scss */
+  /* line 179, scss/partials/_forms.scss */
   .left_label .ginput_container {
     width: 67.85714%;
     float: right;
     margin-right: 0;
   }
-  /* line 174, scss/partials/_forms.scss */
+  /* line 182, scss/partials/_forms.scss */
   .left_label .gfield_checkbox {
     margin-top: 0.3em;
   }
 }
 @media (min-width: 60em) {
-  /* line 179, scss/partials/_forms.scss */
+  /* line 187, scss/partials/_forms.scss */
   .left_label .gfield_label {
     width: 14.28571%;
     float: left;
     margin-right: 7.14286%;
     margin-top: 0.3em;
   }
-  /* line 184, scss/partials/_forms.scss */
+  /* line 192, scss/partials/_forms.scss */
   .left_label .ginput_container {
     width: 78.57143%;
     float: right;
     margin-right: 0;
   }
 }
-/* line 189, scss/partials/_forms.scss */
+/* line 197, scss/partials/_forms.scss */
 .left_label.gform_footer {
   text-align: right;
 }
 
 @media (min-width: 30em) {
-  /* line 196, scss/partials/_forms.scss */
+  /* line 204, scss/partials/_forms.scss */
   .right_label .gfield_label {
     width: 25%;
     float: right;
     margin-right: 0;
     margin-top: 0.3em;
   }
-  /* line 200, scss/partials/_forms.scss */
+  /* line 208, scss/partials/_forms.scss */
   .right_label .ginput_container {
     width: 67.85714%;
     float: left;
@@ -4926,7 +5035,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   }
 }
 
-/* line 206, scss/partials/_forms.scss */
+/* line 214, scss/partials/_forms.scss */
 .ginput_left {
   clear: left;
   width: 46.42857%;
@@ -4934,7 +5043,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   margin-right: 7.14286%;
 }
 
-/* line 211, scss/partials/_forms.scss */
+/* line 219, scss/partials/_forms.scss */
 .ginput_right {
   clear: right;
   width: 46.42857%;
@@ -4942,22 +5051,22 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   margin-right: 0;
 }
 
-/* line 216, scss/partials/_forms.scss */
+/* line 224, scss/partials/_forms.scss */
 .large {
   width: 100%;
 }
 
-/* line 220, scss/partials/_forms.scss */
+/* line 228, scss/partials/_forms.scss */
 .medium {
   width: 75%;
 }
 
-/* line 224, scss/partials/_forms.scss */
+/* line 232, scss/partials/_forms.scss */
 .small {
   width: 50%;
 }
 
-/* line 231, scss/partials/_forms.scss */
+/* line 239, scss/partials/_forms.scss */
 .ginput_complex label {
   display: block;
   font-size: 0.8em;
@@ -4965,36 +5074,36 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   margin-top: 0.74797rem;
   clear: both;
 }
-/* line 238, scss/partials/_forms.scss */
+/* line 246, scss/partials/_forms.scss */
 .ginput_complex input,
 .ginput_complex select,
 .ginput_complex textarea {
   width: 100%;
 }
-/* line 244, scss/partials/_forms.scss */
+/* line 252, scss/partials/_forms.scss */
 .ginput_complex input[type=radio],
 .ginput_complex input[type=checkbox] {
   width: auto;
 }
 
-/* line 250, scss/partials/_forms.scss */
+/* line 258, scss/partials/_forms.scss */
 .gfield_list {
   table-layout: auto;
   width: 100%;
 }
 
-/* line 255, scss/partials/_forms.scss */
+/* line 263, scss/partials/_forms.scss */
 .gfield_list_cell {
   padding: 0;
   padding-bottom: 16.75453px;
   padding-bottom: 0.74797rem;
 }
-/* line 259, scss/partials/_forms.scss */
+/* line 267, scss/partials/_forms.scss */
 .gfield_list_cell input {
   width: 100%;
 }
 
-/* line 264, scss/partials/_forms.scss */
+/* line 272, scss/partials/_forms.scss */
 .gfield_list_icons {
   padding: 0;
   text-align: right;
@@ -5002,7 +5111,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   padding-bottom: 0.74797rem;
 }
 
-/* line 270, scss/partials/_forms.scss */
+/* line 278, scss/partials/_forms.scss */
 .ginput_full {
   display: block;
   width: 100%;
@@ -5011,7 +5120,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
 }
 
 @media (min-width: 30em) {
-  /* line 277, scss/partials/_forms.scss */
+  /* line 285, scss/partials/_forms.scss */
   .ginput_cardinfo_left {
     width: 46.42857%;
     float: left;
@@ -5020,7 +5129,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
 }
 
 @media (min-width: 30em) {
-  /* line 283, scss/partials/_forms.scss */
+  /* line 291, scss/partials/_forms.scss */
   .ginput_cardinfo_right {
     width: 46.42857%;
     float: right;
@@ -5028,7 +5137,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   }
 }
 
-/* line 289, scss/partials/_forms.scss */
+/* line 297, scss/partials/_forms.scss */
 .ginput_card_expiration_month {
   width: 46.42857%;
   float: left;
@@ -5037,7 +5146,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   margin-bottom: 0.74797rem;
 }
 
-/* line 294, scss/partials/_forms.scss */
+/* line 302, scss/partials/_forms.scss */
 .ginput_card_expiration_year {
   width: 46.42857%;
   float: right;
@@ -5046,14 +5155,48 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   margin-bottom: 0.74797rem;
 }
 
-/* line 299, scss/partials/_forms.scss */
+/* line 307, scss/partials/_forms.scss */
 .ginput_card_security_code_icon {
   display: none;
 }
 
-/* line 303, scss/partials/_forms.scss */
+/* line 311, scss/partials/_forms.scss */
 .gform_card_icon_container {
   display: none;
+}
+
+/* line 320, scss/partials/_forms.scss */
+#loginform label {
+  display: block;
+  margin-bottom: 8.37727px;
+  margin-bottom: 0.37399rem;
+}
+/* line 325, scss/partials/_forms.scss */
+#loginform p {
+  margin-bottom: 16.75453px;
+  margin-bottom: 0.74797rem;
+}
+/* line 329, scss/partials/_forms.scss */
+#loginform .input {
+  display: block;
+  width: 100%;
+}
+
+/* line 336, scss/partials/_forms.scss */
+.page-template-template-login-php .main-content--full-width {
+  max-width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #c8c8c8;
+  border-radius: .3em;
+  background-color: #fefefe;
+  box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.2);
+  padding: 33.50906px;
+  padding: 1.49594rem;
+}
+/* line 346, scss/partials/_forms.scss */
+.page-template-template-login-php .main-content--full-width .posttitle {
+  text-align: center;
 }
 
 /* line 5, scss/partials/_extra.scss */
@@ -5155,7 +5298,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
 }
 
 /* line 111, scss/partials/_extra.scss */
-.single-post__header {
+.single-post__header, .single-project__header {
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -5172,7 +5315,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
 }
 @media (min-width: 30em) {
   /* line 111, scss/partials/_extra.scss */
-  .single-post__header {
+  .single-post__header, .single-project__header {
     padding-top: 67.01812px;
     padding-top: 2.99188rem;
     padding-bottom: 67.01812px;
@@ -5181,7 +5324,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
 }
 @media (min-width: 60em) {
   /* line 111, scss/partials/_extra.scss */
-  .single-post__header {
+  .single-post__header, .single-project__header {
     padding-top: 134.03624px;
     padding-top: 5.98376rem;
     padding-bottom: 134.03624px;
@@ -5189,7 +5332,7 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
   }
 }
 /* line 131, scss/partials/_extra.scss */
-.single-post__header h1, .single-post__header .h1 {
+.single-post__header h1, .single-project__header h1, .single-post__header .h1, .single-project__header .h1 {
   margin: 0;
   color: #fbfbfb;
   font-family: "dodge", Helvetica, Arial, sans-serif;
@@ -5197,14 +5340,14 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
 }
 @media (min-width: 60em) {
   /* line 131, scss/partials/_extra.scss */
-  .single-post__header h1, .single-post__header .h1 {
+  .single-post__header h1, .single-project__header h1, .single-post__header .h1, .single-project__header .h1 {
     font-size: 70.79506px;
     font-size: 3.16049rem;
     line-height: 1.41997;
   }
 }
 /* line 141, scss/partials/_extra.scss */
-.single-post__header.has-bgimg h1, .single-post__header.has-bgimg .h1 {
+.single-post__header.has-bgimg h1, .has-bgimg.single-project__header h1, .single-post__header.has-bgimg .h1, .has-bgimg.single-project__header .h1 {
   text-shadow: 0 0 0.5em #515252;
 }
 
@@ -5272,6 +5415,443 @@ a.tribe-events-gcal::-moz-focus-inner, .project-preview .read-more::-moz-focus-i
 .single-project__contributors {
   margin-top: 67.01812px;
   margin-top: 2.99188rem;
+}
+
+/* line 244, scss/partials/_extra.scss */
+.postmeta {
+  font-style: italic;
+  color: #9d9f9f;
+}
+/* line 248, scss/partials/_extra.scss */
+.postmeta a {
+  color: #ff9361;
+}
+/* line 475, scss/vendor/_scut.scss */
+.postmeta a:hover, .postmeta a:focus, .postmeta a:active {
+  color: #e04848;
+}
+
+/* line 258, scss/partials/_extra.scss */
+.small-screen-hide-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+@media (min-width: 30em) {
+  /* line 258, scss/partials/_extra.scss */
+  .small-screen-hide-text {
+    position: static;
+    clip: none;
+    height: auto;
+    width: auto;
+    margin: 0;
+  }
+}
+
+/* line 5, scss/partials/_memberships.scss */
+.pmpro_checkout tr.odd td {
+  background: none;
+}
+
+/* line 9, scss/partials/_memberships.scss */
+.pmpro_checkout {
+  background: none;
+}
+
+/* line 13, scss/partials/_memberships.scss */
+.pmpro_asterisk {
+  display: none;
+}
+
+/* line 21, scss/partials/_memberships.scss */
+form.pmpro_form label {
+  width: 100%;
+  font-weight: normal;
+  margin: 0;
+  clear: both;
+  text-align: left;
+  margin-bottom: 16.75453px;
+  margin-bottom: 0.74797rem;
+}
+@media (min-width: 30em) {
+  /* line 21, scss/partials/_memberships.scss */
+  form.pmpro_form label {
+    text-align: right;
+    width: 29.41176%;
+    float: left;
+    margin-right: 5.88235%;
+  }
+}
+
+/* line 34, scss/partials/_memberships.scss */
+form.pmpro_form .input,
+form.pmpro_form select {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 16.75453px;
+  margin-bottom: 0.74797rem;
+}
+@media (min-width: 30em) {
+  /* line 34, scss/partials/_memberships.scss */
+  form.pmpro_form .input,
+  form.pmpro_form select {
+    width: 64.70588%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 51, scss/partials/_memberships.scss */
+body .pmpro_btn,
+body .pmpro_btn:link {
+  font-size: 16.8px;
+  font-size: 0.75rem;
+  line-height: 1.99459;
+}
+
+/* line 57, scss/partials/_memberships.scss */
+.pmpro_thead-msg {
+  white-space: normal;
+  float: none;
+}
+@media (min-width: 30em) {
+  /* line 57, scss/partials/_memberships.scss */
+  .pmpro_thead-msg {
+    float: right;
+  }
+}
+
+/* line 66, scss/partials/_memberships.scss */
+#pmpro_payment_information_fields {
+  display: none !important;
+}
+
+/* line 6, scss/partials/_projects.scss */
+.listing-table tbody {
+  font-size: 16.8px;
+  font-size: 0.75rem;
+  line-height: 1.99459;
+}
+/* line 9, scss/partials/_projects.scss */
+.listing-table tbody th {
+  border: none;
+}
+/* line 15, scss/partials/_projects.scss */
+.listing-table .pagination ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 22, scss/partials/_projects.scss */
+.listing-table .pagination a {
+  display: inline-block;
+  min-width: 1.2em;
+  text-align: center;
+  color: #919292;
+}
+/* line 475, scss/vendor/_scut.scss */
+.listing-table .pagination a:hover, .listing-table .pagination a:focus, .listing-table .pagination a:active {
+  color: #515252;
+}
+/* line 31, scss/partials/_projects.scss */
+.listing-table .pagination .active a {
+  color: #ff702e;
+}
+
+/* line 37, scss/partials/_projects.scss */
+.listing-table__row__title {
+  font-weight: bold;
+}
+
+/* line 41, scss/partials/_projects.scss */
+.listing-table-filter {
+  display: none;
+  margin-bottom: 33.50906px;
+  margin-bottom: 1.49594rem;
+}
+@media (min-width: 30em) {
+  /* line 41, scss/partials/_projects.scss */
+  .listing-table-filter {
+    text-align: right;
+  }
+}
+
+/* line 49, scss/partials/_projects.scss */
+.listing-table-filter-toggle {
+  float: right;
+  margin-bottom: 33.50906px;
+  margin-bottom: 1.49594rem;
+  margin-left: 1em;
+  color: #515252;
+  padding: .3em 0;
+}
+
+/* line 1, scss/partials/_resources.scss */
+.single-resource__content {
+  margin-bottom: 67.01812px;
+  margin-bottom: 2.99188rem;
+}
+
+@font-face {
+  font-family: 'footable';
+  src: url("fonts/footable.eot");
+  src: url("fonts/footable.eot?#iefix") format("embedded-opentype"), url("fonts/footable.woff") format("woff"), url("fonts/footable.ttf") format("truetype"), url("fonts/footable.svg#footable") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'footable';
+    src: url("fonts/footable.svg#footable") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+/* line 16, scss/vendor/_footable.scss */
+.footable {
+  width: 100%;
+  /** SORTING **/
+  /** PAGINATION **/
+}
+
+/* line 23, scss/vendor/_footable.scss */
+.footable.breakpoint > tbody > tr.footable-detail-show > td {
+  border-bottom: none;
+}
+
+/* line 26, scss/vendor/_footable.scss */
+.footable.breakpoint > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e001";
+}
+
+/* line 29, scss/vendor/_footable.scss */
+.footable.breakpoint > tbody > tr:hover:not(.footable-row-detail) {
+  cursor: pointer;
+}
+
+/* line 32, scss/vendor/_footable.scss */
+.footable.breakpoint > tbody > tr > td.footable-cell-detail {
+  background: #eee;
+  border-top: none;
+}
+
+/* line 36, scss/vendor/_footable.scss */
+.footable.breakpoint > tbody > tr > td > span.footable-toggle {
+  display: inline-block;
+  font-family: 'footable';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 5px;
+  font-size: 14px;
+  color: #888888;
+}
+
+/* line 49, scss/vendor/_footable.scss */
+.footable.breakpoint > tbody > tr > td > span.footable-toggle:before {
+  content: "\e000";
+}
+
+/* line 52, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-circle > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e005";
+}
+
+/* line 55, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-circle > tbody > tr > td > span.footable-toggle:before {
+  content: "\e004";
+}
+
+/* line 58, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-circle-filled > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e003";
+}
+
+/* line 61, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-circle-filled > tbody > tr > td > span.footable-toggle:before {
+  content: "\e002";
+}
+
+/* line 64, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-square > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e007";
+}
+
+/* line 67, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-square > tbody > tr > td > span.footable-toggle:before {
+  content: "\e006";
+}
+
+/* line 70, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-square-filled > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e009";
+}
+
+/* line 73, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-square-filled > tbody > tr > td > span.footable-toggle:before {
+  content: "\e008";
+}
+
+/* line 76, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e00f";
+}
+
+/* line 79, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow > tbody > tr > td > span.footable-toggle:before {
+  content: "\e011";
+}
+
+/* line 82, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-small > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e013";
+}
+
+/* line 85, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-small > tbody > tr > td > span.footable-toggle:before {
+  content: "\e015";
+}
+
+/* line 88, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-circle > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e01b";
+}
+
+/* line 91, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-circle > tbody > tr > td > span.footable-toggle:before {
+  content: "\e01d";
+}
+
+/* line 94, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-circle-filled > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e00b";
+}
+
+/* line 97, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-circle-filled > tbody > tr > td > span.footable-toggle:before {
+  content: "\e00d";
+}
+
+/* line 100, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-tiny > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e01f";
+}
+
+/* line 103, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-tiny > tbody > tr > td > span.footable-toggle:before {
+  content: "\e021";
+}
+
+/* line 106, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-alt > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e017";
+}
+
+/* line 109, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-arrow-alt > tbody > tr > td > span.footable-toggle:before {
+  content: "\e019";
+}
+
+/* line 112, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-medium > tbody > tr > td > span.footable-toggle {
+  font-size: 18px;
+}
+
+/* line 115, scss/vendor/_footable.scss */
+.footable.breakpoint.toggle-large > tbody > tr > td > span.footable-toggle {
+  font-size: 24px;
+}
+
+/* line 118, scss/vendor/_footable.scss */
+.footable > thead > tr > th {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 126, scss/vendor/_footable.scss */
+.footable > thead > tr > th.footable-sortable:hover {
+  cursor: pointer;
+}
+
+/* line 129, scss/vendor/_footable.scss */
+.footable > thead > tr > th.footable-sorted > span.footable-sort-indicator:before {
+  content: "\e013";
+}
+
+/* line 132, scss/vendor/_footable.scss */
+.footable > thead > tr > th.footable-sorted-desc > span.footable-sort-indicator:before {
+  content: "\e012";
+}
+
+/* line 135, scss/vendor/_footable.scss */
+.footable > thead > tr > th > span.footable-sort-indicator {
+  display: inline-block;
+  font-family: 'footable';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  padding-left: 5px;
+}
+
+/* line 146, scss/vendor/_footable.scss */
+.footable > thead > tr > th > span.footable-sort-indicator:before {
+  content: "\e022";
+}
+
+/* line 149, scss/vendor/_footable.scss */
+.footable > tfoot .pagination {
+  margin: 0;
+}
+
+/* line 152, scss/vendor/_footable.scss */
+.footable.no-paging .hide-if-no-paging {
+  display: none;
+}
+
+/* line 155, scss/vendor/_footable.scss */
+.footable-row-detail-inner {
+  display: table;
+}
+
+/* line 158, scss/vendor/_footable.scss */
+.footable-row-detail-row {
+  display: table-row;
+  line-height: 1.5em;
+}
+
+/* line 162, scss/vendor/_footable.scss */
+.footable-row-detail-group {
+  display: block;
+  line-height: 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* line 168, scss/vendor/_footable.scss */
+.footable-row-detail-name {
+  display: table-cell;
+  font-weight: bold;
+  padding-right: 0.5em;
+}
+
+/* line 173, scss/vendor/_footable.scss */
+.footable-row-detail-value {
+  display: table-cell;
 }
 
 /*! Hint.css - v1.3.1 - 2013-11-23
