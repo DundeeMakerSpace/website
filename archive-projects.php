@@ -13,7 +13,8 @@ foreach ( $projects as $project ) {
     $status = false;
     $maker = false;
     if ( $statuses = get_the_terms( $project, 'project-status' ) ) {
-        $status = array_values( $statuses )[0];
+        $status = array_values( $statuses );
+        $status = $status[0];
     }
     if ( $makers = get_users( array(
         'connected_type' => 'project_contributors',
@@ -30,8 +31,8 @@ foreach ( $projects as $project ) {
 
 $context['projects'] = Timber::get_posts( $projects );
 
-if ( !is_singular() ) {
-    $context['is_archive'] = true;
-    $context['pagination'] = Timber::get_pagination();
-}
+// if ( !is_singular() ) {
+    // $context['is_archive'] = true;
+    // $context['pagination'] = Timber::get_pagination();
+// }
 Timber::render( 'projects.twig', $context );
