@@ -76,6 +76,10 @@ module.exports = function( grunt ) {
         },
         files: {
           'require.js': 'requirejs/require.js',
+          'footable/footable.js': 'footable/dist/footable.min.js',
+          'footable/footable.filter.js': 'footable/dist/footable.filter.min.js',
+          'footable/footable.paginate.js': 'footable/dist/footable.paginate.min.js',
+          'footable/footable.sort.js': 'footable/dist/footable.sort.min.js',
           // 'bxslider.js': 'bxslider-4/jquery.bxslider.min.js'
         }
       },
@@ -98,6 +102,18 @@ module.exports = function( grunt ) {
           '_sassybuttons.sass': 'sassy-buttons/_sassybuttons.sass',
           'sassy-buttons': 'sassy-buttons/sassy-buttons',
           '_hint.scss': 'hint.css/hint.css',
+          '_footable.scss': 'footable/css/footable.core.css',
+        }
+      },
+      fonts: {
+        options: {
+          destPrefix: 'fonts'
+        },
+        files: {
+          'footable.eot': 'footable/css/fonts/footable.eot',
+          'footable.svg': 'footable/css/fonts/footable.svg',
+          'footable.ttf': 'footable/css/fonts/footable.ttf',
+          'footable.woff': 'footable/css/fonts/footable.woff'
         }
       }
     },

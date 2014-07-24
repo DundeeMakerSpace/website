@@ -2,3 +2,6 @@ node_modules
 .sass-cache
 bower_components
 scss/vendor
+fonts/footable*
+js/vendor
+js/main.min.js

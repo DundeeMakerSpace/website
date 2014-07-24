@@ -252,3 +252,16 @@
         }
     }
 }
+
+// Hide certain things on small screens
+
+.small-screen-hide-text {
+    @include scut-hide-visually();
+    @include breakpoint($mid-break, '.lt-ie9') {
+        position: static;
+        clip: none;
+        height: auto;
+        width: auto;
+        margin: 0;
+    }
+}

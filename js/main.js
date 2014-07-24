@@ -2,6 +2,19 @@ if (typeof jQuery === 'function') {
     define('jquery', function () { return jQuery; });
 }
 
-// require(['jquery'], function($){
+require(['jquery', 'vendor/footable/footable', 'vendor/footable/footable.paginate', 'vendor/footable/footable.sort', 'vendor/footable/footable.filter'], function($){
+    $('.listing-table').footable({
+        breakpoints: {
+            phone: 490,
+            tablet: 960
+        }
+    });
+    var $filter = $('.listing-table-filter');
 
-// });
+    $filter.before('<a href="#" class="icon-search listing-table-filter-toggle" id="listing-table-filter-toggle"><span class="screen-reader-text">Show Search Tool</span></a>');
+
+    $('body').on('click', '#listing-table-filter-toggle', function(e){
+        e.preventDefault();
+        $filter.slideToggle();
+    });
+});

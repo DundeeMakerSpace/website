@@ -4,6 +4,53 @@
 		{
 			"icon": {
 				"paths": [
+					"M0 475.429q0-81.714 31.714-156.286t85.714-128.571 128.571-85.714 156.286-31.714 156.286 31.714 128.571 85.714 85.714 128.571 31.714 156.286q0 125.714-70.857 228l196 196q21.143 21.143 21.143 51.429 0 29.714-21.714 51.429t-51.429 21.714q-30.857 0-51.429-21.714l-196-195.429q-102.286 70.857-228 70.857-81.714 0-156.286-31.714t-128.571-85.714-85.714-128.571-31.714-156.286zM146.286 475.429q0 105.714 75.143 180.857t180.857 75.143 180.857-75.143 75.143-180.857-75.143-180.857-180.857-75.143-180.857 75.143-75.143 180.857z"
+				],
+				"width": 951,
+				"tags": [
+					"search"
+				],
+				"defaultCode": 61442,
+				"grid": 14
+			},
+			"properties": {
+				"id": 2,
+				"order": 2,
+				"prevSize": 28,
+				"code": 61442,
+				"name": "search",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 2
+		},
+		{
+			"icon": {
+				"paths": [
+					"M640 0.16c-212.064 0-384 171.936-384 384 0 64.832 16.224 125.856 44.64 179.456l-267.008 266.944 0.224 0.192c-20.864 20.512-33.856 48.928-33.856 80.512 0 62.368 50.56 112.928 112.928 112.928 31.52 0 59.968-12.992 80.48-33.888l-0.064-0.064 266.912-266.88c53.632 28.512 114.752 44.8 179.744 44.8 212.064 0 384-171.936 384-384 0-212.064-171.936-384-384-384zM153.44 950.304c-10.304 10.688-24.576 17.376-40.512 17.376-31.2 0-56.48-25.248-56.48-56.448 0-15.936 6.72-30.176 17.376-40.512l-0.288-0.256 258.112-258.112c22.56 30.432 49.44 57.312 79.808 79.936l-258.016 258.016zM640 704.192c-176.704 0-320-143.328-320-320 0-176.704 143.296-320 320-320 176.672 0 320 143.296 320 320 0 176.672-143.328 320-320 320zM640 160.16c8.8 0 16 7.168 16 16s-7.2 16-16 16c-106.048 0-192 85.984-192 192 0 8.832-7.168 16-16 16-8.832 0-16-7.168-16-16 0-123.712 100.256-224 224-224z"
+				],
+				"tags": [
+					"search",
+					"magnifier",
+					"lookup",
+					"find"
+				],
+				"grid": 32
+			},
+			"properties": {
+				"id": 9,
+				"order": 1,
+				"prevSize": 24,
+				"code": 58892,
+				"name": "search2",
+				"ligatures": ""
+			},
+			"setIdx": 1,
+			"iconIdx": 9
+		},
+		{
+			"icon": {
+				"paths": [
 					"M914.005 409.344l-275.84-278.827c-56.704-56.747-131.712-87.851-211.499-87.851s-154.795 31.104-211.2 87.509c-60.416 60.331-90.752 143.189-86.485 226.731-28.245 46.293-43.648 99.413-43.648 155.051 0 79.787 31.104 154.795 87.509 211.2l130.261 127.317 148.565 148.48c16.683 16.725 38.485 25.045 60.331 25.045s43.648-8.32 60.331-25.003l298.667-298.667c33.195-33.195 33.365-86.955 0.341-120.32l-3.968-4.011 46.293-46.336c33.195-33.195 33.365-86.955 0.341-120.32zM512 938.667l-149.248-149.205-129.579-126.635c-83.328-83.328-83.328-218.411 0-301.653 41.643-41.685 96.256-62.507 150.827-62.507s109.184 20.821 150.827 62.507l275.84 278.827-298.667 298.667zM595.499 301.184c-56.704-56.747-131.712-87.851-211.499-87.851-54.443 0-106.539 14.805-152.107 41.899 10.283-23.467 24.704-45.525 43.947-64.768 41.643-41.643 96.256-62.464 150.827-62.464s109.184 20.821 150.827 62.507l275.84 278.827-45.995 45.995-211.84-214.144z",
 					"M384 447.957c35.413 0 64 28.672 64 64.043 0 35.413-28.587 63.957-64 63.957s-64-28.544-64-63.957c0-35.371 28.587-64.043 64-64.043M384 405.291c-58.795 0-106.667 47.872-106.667 106.709 0 58.795 47.872 106.624 106.667 106.624s106.667-47.829 106.667-106.624c0-58.837-47.872-106.709-106.667-106.709z"
 				],
@@ -20,8 +67,8 @@
 				"name": "tags",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 281
+			"setIdx": 2,
+			"iconIdx": 0
 		},
 		{
 			"icon": {
@@ -49,8 +96,8 @@
 				"name": "plug",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 282
+			"setIdx": 2,
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -71,8 +118,8 @@
 				"name": "spanner-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 251
+			"setIdx": 2,
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -93,8 +140,8 @@
 				"name": "device-desktop",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 248
+			"setIdx": 2,
+			"iconIdx": 3
 		},
 		{
 			"icon": {
@@ -115,8 +162,8 @@
 				"name": "device-phone",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 246
+			"setIdx": 2,
+			"iconIdx": 4
 		},
 		{
 			"icon": {
@@ -136,8 +183,8 @@
 				"name": "device-laptop",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 247
+			"setIdx": 2,
+			"iconIdx": 5
 		},
 		{
 			"icon": {
@@ -158,8 +205,8 @@
 				"name": "device-tablet",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 245
+			"setIdx": 2,
+			"iconIdx": 6
 		},
 		{
 			"icon": {
@@ -179,8 +226,8 @@
 				"name": "gift",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 235
+			"setIdx": 2,
+			"iconIdx": 7
 		},
 		{
 			"icon": {
@@ -204,8 +251,8 @@
 				"name": "business-card",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 219
+			"setIdx": 2,
+			"iconIdx": 8
 		},
 		{
 			"icon": {
@@ -225,8 +272,8 @@
 				"name": "calender-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 218
+			"setIdx": 2,
+			"iconIdx": 9
 		},
 		{
 			"icon": {
@@ -246,8 +293,8 @@
 				"name": "pen",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 209
+			"setIdx": 2,
+			"iconIdx": 10
 		},
 		{
 			"icon": {
@@ -267,8 +314,8 @@
 				"name": "pencil",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 198
+			"setIdx": 2,
+			"iconIdx": 11
 		},
 		{
 			"icon": {
@@ -289,8 +336,8 @@
 				"name": "tag",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 190
+			"setIdx": 2,
+			"iconIdx": 12
 		},
 		{
 			"icon": {
@@ -311,8 +358,8 @@
 				"name": "cog-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 175
+			"setIdx": 2,
+			"iconIdx": 13
 		},
 		{
 			"icon": {
@@ -332,8 +379,8 @@
 				"name": "mail",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 144
+			"setIdx": 2,
+			"iconIdx": 14
 		},
 		{
 			"icon": {
@@ -353,8 +400,8 @@
 				"name": "message",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 135
+			"setIdx": 2,
+			"iconIdx": 15
 		},
 		{
 			"icon": {
@@ -375,8 +422,8 @@
 				"name": "link-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 137
+			"setIdx": 2,
+			"iconIdx": 16
 		},
 		{
 			"icon": {
@@ -398,8 +445,8 @@
 				"name": "th-menu",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 11
+			"setIdx": 2,
+			"iconIdx": 17
 		},
 		{
 			"icon": {
@@ -421,8 +468,8 @@
 				"name": "shopping-cart",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 304
+			"setIdx": 2,
+			"iconIdx": 18
 		},
 		{
 			"icon": {
@@ -443,8 +490,8 @@
 				"name": "credit-card",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 284
+			"setIdx": 2,
+			"iconIdx": 19
 		},
 		{
 			"icon": {
@@ -466,8 +513,8 @@
 				"name": "contacts",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 257
+			"setIdx": 2,
+			"iconIdx": 20
 		},
 		{
 			"icon": {
@@ -487,8 +534,8 @@
 				"name": "pin-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 192
+			"setIdx": 2,
+			"iconIdx": 21
 		},
 		{
 			"icon": {
@@ -510,8 +557,8 @@
 				"name": "image-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 138
+			"setIdx": 2,
+			"iconIdx": 22
 		},
 		{
 			"icon": {
@@ -532,8 +579,8 @@
 				"name": "location-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 136
+			"setIdx": 2,
+			"iconIdx": 23
 		},
 		{
 			"icon": {
@@ -555,8 +602,8 @@
 				"name": "th-menu-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 125
+			"setIdx": 2,
+			"iconIdx": 24
 		},
 		{
 			"icon": {
@@ -576,8 +623,8 @@
 				"name": "phone-outline",
 				"ligatures": ""
 			},
-			"setIdx": 1,
-			"iconIdx": 265
+			"setIdx": 2,
+			"iconIdx": 25
 		},
 		{
 			"icon": {
@@ -599,8 +646,8 @@
 				"name": "github-alt",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 246
+			"setIdx": 2,
+			"iconIdx": 26
 		},
 		{
 			"icon": {
@@ -622,8 +669,8 @@
 				"name": "google-plus",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 188
+			"setIdx": 2,
+			"iconIdx": 27
 		},
 		{
 			"icon": {
@@ -644,8 +691,8 @@
 				"name": "google-plus-square",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 187
+			"setIdx": 2,
+			"iconIdx": 28
 		},
 		{
 			"icon": {
@@ -666,8 +713,8 @@
 				"name": "pinterest-square",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 186
+			"setIdx": 2,
+			"iconIdx": 29
 		},
 		{
 			"icon": {
@@ -688,8 +735,8 @@
 				"name": "pinterest",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 185
+			"setIdx": 2,
+			"iconIdx": 30
 		},
 		{
 			"icon": {
@@ -710,8 +757,8 @@
 				"name": "globe",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 162
+			"setIdx": 2,
+			"iconIdx": 31
 		},
 		{
 			"icon": {
@@ -733,8 +780,8 @@
 				"name": "twitter",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 144
+			"setIdx": 2,
+			"iconIdx": 32
 		},
 		{
 			"icon": {
@@ -756,8 +803,8 @@
 				"name": "facebook",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 145
+			"setIdx": 2,
+			"iconIdx": 33
 		},
 		{
 			"icon": {
@@ -778,8 +825,8 @@
 				"name": "github",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 146
+			"setIdx": 2,
+			"iconIdx": 34
 		},
 		{
 			"icon": {
@@ -800,8 +847,8 @@
 				"name": "github-square",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 137
+			"setIdx": 2,
+			"iconIdx": 35
 		},
 		{
 			"icon": {
@@ -822,8 +869,8 @@
 				"name": "linkedin-square",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 132
+			"setIdx": 2,
+			"iconIdx": 36
 		},
 		{
 			"icon": {
@@ -844,8 +891,8 @@
 				"name": "twitter-square",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 121
+			"setIdx": 2,
+			"iconIdx": 37
 		},
 		{
 			"icon": {
@@ -866,8 +913,8 @@
 				"name": "facebook-square",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 122
+			"setIdx": 2,
+			"iconIdx": 38
 		},
 		{
 			"icon": {
@@ -888,8 +935,8 @@
 				"name": "linkedin",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 199
+			"setIdx": 2,
+			"iconIdx": 39
 		},
 		{
 			"icon": {
@@ -910,8 +957,8 @@
 				"name": "youtube-square",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 322
+			"setIdx": 2,
+			"iconIdx": 40
 		},
 		{
 			"icon": {
@@ -932,8 +979,8 @@
 				"name": "youtube",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 323
+			"setIdx": 2,
+			"iconIdx": 41
 		},
 		{
 			"icon": {
@@ -954,8 +1001,8 @@
 				"name": "instagram",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 329
+			"setIdx": 2,
+			"iconIdx": 42
 		},
 		{
 			"icon": {
@@ -977,8 +1024,8 @@
 				"name": "apple",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 340
+			"setIdx": 2,
+			"iconIdx": 43
 		},
 		{
 			"icon": {
@@ -1000,8 +1047,8 @@
 				"name": "windows",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 341
+			"setIdx": 2,
+			"iconIdx": 44
 		},
 		{
 			"icon": {
@@ -1022,8 +1069,8 @@
 				"name": "linux",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 343
+			"setIdx": 2,
+			"iconIdx": 45
 		},
 		{
 			"icon": {
@@ -1044,8 +1091,8 @@
 				"name": "trello",
 				"ligatures": ""
 			},
-			"setIdx": 0,
-			"iconIdx": 347
+			"setIdx": 2,
+			"iconIdx": 46
 		}
 	],
 	"height": 1024,
@@ -1064,14 +1111,11 @@
 				"emSize": 512,
 				"baseline": 6.25,
 				"whitespace": 50
-			},
-			"autoHost": false
+			}
 		},
 		"imagePref": {},
 		"historySize": 100,
 		"showCodes": true,
-		"quickUsageToken": {
-			"UntitledProject3": "ZjVkOGEwMWZlMmM0NjdhOWQzYWUwMGRmOGVjMmU5NTMjMiMxMzk2NzAzMzE3IyMj"
-		}
+		"search": ""
 	}
 }
