@@ -10,7 +10,7 @@ class TerminallyPixelatedMap {
 
     public function scripts() {
         wp_register_script( 'leaflet', 'http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js', false, false, true );
-        wp_register_script( 'leaflet-init', TPHelpers::get_theme_resource_uri( 'js/leaflet-init.js' ), array( 'leaflet' ), false, true );
+        wp_register_script( 'leaflet-init', TPHelpers::get_theme_resource_uri( 'js/leaflet-init.js' ), array( 'leaflet', 'jquery' ), false, true );
     }
 
     public static function init( $id, $lat, $lng, $zoom = 14, $popup = false ) {
