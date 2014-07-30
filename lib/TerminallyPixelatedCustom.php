@@ -6,11 +6,12 @@ class TerminallyPixelatedCustom {
 
     function __construct() {
         // add_action( 'wp_footer', array( $this, 'typekit' ) );
-        add_filter( 'timber_context', array( $this, 'donate_page' ) );
+        add_filter( 'timber_context', array( $this, 'theme_variables' ) );
         add_action( 'after_setup_theme', array( $this, 'format_support' ) );
         add_action( 'admin_init', array( $this, 'editor_gravity_forms_access' ) );
         add_filter( 'author_link', array( $this, 'member_link' ), 10, 3);
         add_filter( 'login_url', array( $this, 'member_login_url' ), 10, 2 );
+        add_action( 'init', array( $this, 'map' ) );
     }
 
     public static function typekit() { ?>
@@ -18,9 +19,23 @@ class TerminallyPixelatedCustom {
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <?php }
 
-    public static function donate_page( $context ) {
+    public static function theme_variables( $context ) {
         $context['donate_page'] = get_field( 'site_donate_page', 'options' );
+
+
+
         return $context;
+    }
+
+    function map() {
+        TerminallyPixelatedMap::init(
+            'makerspace-map',
+            56.462232,
+            -2.984308,
+            14,
+            '<address>Unit 3A, Meadow Mill, <br>West Henderson\'s Wynd, <br>DD1 5BY</address>
+            <a target="_blank" href="' . TerminallyPixelatedMap::get_directions_link( 'Unit 3A Meadow Mill, West Hendersons Wynd, DD1 5BY' ) . '">Get Directions</a>'
+        );
     }
 
     public static function format_support() {

@@ -111,7 +111,7 @@
 
 .main-footer {
 	clear: both;
-	@include tp-padding-leader(2);
+	// @include tp-padding-leader(2);
 	@include tp-padding-trailer(2);
 	@include tp-leader;
 }
