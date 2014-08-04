@@ -9,6 +9,7 @@ class TerminallyPixelatedCustom {
         add_filter( 'timber_context', array( $this, 'donate_page' ) );
         add_action( 'after_setup_theme', array( $this, 'format_support' ) );
         add_action( 'admin_init', array( $this, 'editor_gravity_forms_access' ) );
+        // add_action( 'wp_enqueue_scripts', array( $this, 'open_notification' ) );
     }
 
     public static function typekit() { ?>
@@ -28,6 +29,10 @@ class TerminallyPixelatedCustom {
     public static function editor_gravity_forms_access() {
         $role = get_role( 'editor' );
         $role->add_cap( 'gform_full_access' );
+    }
+
+    public static function open_notification() {
+        wp_enqueue_script( 'open-notification', TPHelpers::get_theme_resource_uri( 'js/makerspace-open.js' ), array( 'jquery' ), false, true );
     }
 
 }

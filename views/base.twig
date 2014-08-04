@@ -72,6 +72,12 @@
                     {% include 'partials/nav.twig' with { 'nav_class': 'main-footer__nav', 'menu': footer_menu } %}
                 </div>
             </footer>
+            {# {% if makerspace_open %} #}
+                <div class="space-status-notification" id="space-status-notification">
+                    <span class="space-status-notification__text">Dundee MakerSpace is open!</span>
+                    <button class="space-status-notification__close" id="space-status-notification__close">x</button>
+                </div>
+            {# {% endif %} #}
         </div>
         {{wp_footer}}
     </body>

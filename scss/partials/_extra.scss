@@ -238,3 +238,40 @@
 .single-project__contributors {
     @include tp-leader(2);
 }
+
+// Notification
+
+.space-status-notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($green, .8);
+    color: $bgc;
+    padding: .2em .5em;
+    border-top-right-radius: 5px;
+    transform: translateX(-100%);
+    transition: transform $transition-slow;
+
+    &.is-shown {
+        transform: translateX(0);
+    }
+}
+
+.space-status-notification__text {
+    margin-right: 0.5em;
+    display: inline-block;
+}
+
+.space-status-notification__close,
+.space-status-notification__close:hover,
+.space-status-notification__close:focus,
+.space-status-notification__close:active, {
+    background: none;
+    border-style: none;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0;
+    color: $text-c;
+    font-weight: bold;
+    @include tp-fs(0);
+}
