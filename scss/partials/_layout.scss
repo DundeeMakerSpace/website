@@ -111,7 +111,7 @@
 
 .main-footer {
 	clear: both;
-	@include tp-padding-leader(2);
+	// @include tp-padding-leader(2);
 	@include tp-padding-trailer(2);
 	@include tp-leader;
 }
@@ -317,6 +317,25 @@
 }
 
 
+// Single project
+
+.single-projects {
+	.main-content-sidebar-wrap {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.single-project__content {
+	@extend %tp-container;
+}
+
+.single-project__contributors {
+	@extend %tp-container;
+}
+
+
 // Status update
 
 .post-preview__status__content {
@@ -376,4 +395,10 @@
 			clear: both;
 		}
 	}
+}
+
+.postmeta {
+	@extend %tp-container;
+	@include tp-leader(2);
+	@include tp-trailer(1);
 }

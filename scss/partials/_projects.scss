@@ -1,0 +1,55 @@
+.single-project__header {
+    @extend .single-post__header;
+}
+
+.listing-table {
+    tbody {
+        @include tp-fs(-1);
+
+        th {
+            border: none;
+        }
+    }
+
+    .pagination {
+        ul {
+            @extend %scut-list-inline;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            min-width: 1.2em;
+            text-align: center;
+            color: lighten($text-c, 25%);
+            @include scut-selected(true) {
+                color: $text-c;
+            }
+        }
+        .active a {
+            color: $link-c;
+        }
+    }
+}
+
+.listing-table__row__title {
+    font-weight: bold;
+}
+
+.listing-table-filter {
+    display: none; // Shown with js
+    @include tp-trailer();
+    @include breakpoint($mid-break, '.lt-ie9') {
+        text-align: right;
+    }
+}
+
+.listing-table-filter-toggle {
+    float: right;
+    @include tp-trailer();
+    margin-left: 1em;
+    color: $text-c;
+    padding: .3em 0;
+}

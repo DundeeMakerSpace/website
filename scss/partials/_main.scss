@@ -38,6 +38,7 @@ table {
 
 thead {
     background-color: shade($bgc, 10%);
+    border-bottom: 1px solid $border-c;
 }
 
 tr:nth-child(even) {
@@ -46,5 +47,9 @@ tr:nth-child(even) {
 
 th {
     text-align: left;
-    border-bottom: 1px solid $border-c;
+}
+
+tfoot {
+    background-color: shade($bgc, 10%);
+    border-top: 1px solid $border-c;
 }

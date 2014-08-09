@@ -265,7 +265,7 @@
 .space-status-notification__close,
 .space-status-notification__close:hover,
 .space-status-notification__close:focus,
-.space-status-notification__close:active, {
+.space-status-notification__close:active {
     background: none;
     border-style: none;
     box-shadow: none;
@@ -274,4 +274,31 @@
     color: $text-c;
     font-weight: bold;
     @include tp-fs(0);
+}
+
+// Post meta
+
+.postmeta {
+    font-style: italic;
+    color: lighten($text-c, 30%);
+
+    a {
+        color: lighten($link-c, 10%);
+        @include scut-selected(true) {
+            color: $link-c--hover;
+        }
+    }
+}
+
+// Hide certain things on small screens
+
+.small-screen-hide-text {
+    @include scut-hide-visually();
+    @include breakpoint($mid-break, '.lt-ie9') {
+        position: static;
+        clip: none;
+        height: auto;
+        width: auto;
+        margin: 0;
+    }
 }

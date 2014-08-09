@@ -34,6 +34,7 @@
     "requirejs": "*",
     "sassy-buttons": "*",
     "breakpoint-sass": "~2.4.2",
-    "hint.css": "~1.3.1"
+    "hint.css": "~1.3.1",
+    "footable": "~2.0.1"
   }
 }

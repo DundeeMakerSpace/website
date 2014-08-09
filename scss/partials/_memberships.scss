@@ -64,5 +64,5 @@ body .pmpro_btn:link {
 
 // Don't need these payment fields
 #pmpro_payment_information_fields {
-    display: none;
+    display: none !important;
 }
