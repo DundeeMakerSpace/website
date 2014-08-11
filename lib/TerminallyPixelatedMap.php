@@ -9,7 +9,8 @@ class TerminallyPixelatedMap {
     }
 
     public function scripts() {
-        wp_register_script( 'leaflet', 'http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js', false, false, true );
+        // wp_register_script( 'leaflet', '//cdn.leafletjs.com/leaflet-0.7.2/leaflet.js', false, false, true );
+        wp_register_script( 'leaflet', TPHelpers::get_theme_resource_uri( 'js/vendor/leaflet.js' ), false, false, true );
         wp_register_script( 'leaflet-init', TPHelpers::get_theme_resource_uri( 'js/leaflet-init.js' ), array( 'leaflet', 'jquery' ), false, true );
     }
 
@@ -23,7 +24,7 @@ class TerminallyPixelatedMap {
                 'popup' => $popup
             ) );
             wp_enqueue_script( 'leaflet-init' );
-            wp_enqueue_style( 'leaflet', 'http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css' );
+            // wp_enqueue_style( 'leaflet', '//cdn.leafletjs.com/leaflet-0.7.2/leaflet.css' );
         }, 15 );
     }
 
