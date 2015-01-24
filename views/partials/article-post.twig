@@ -3,7 +3,7 @@
         {% if is_archive %}
             {# {{post|print_r}} #}
             {% if post.thumbnail.src %}
-                <a href="{{post.link}}"><img src="{{post.thumbnail.src|resize(1000,300)}}" alt="{{post.thumbnail.alt | default(post.thumbnail.post_title)}}" class="post-preview__image"></a>
+                <a class="post-preview__image-link" href="{{post.link}}"><img src="{{post.thumbnail.src|resize(1000,300)}}" alt="{{post.thumbnail.alt | default(post.thumbnail.post_title)}}" class="post-preview__image"></a>
             {% endif %}
             {% if fn('get_post_format', post.ID) == 'status' %}
                 {# This is a status update #}

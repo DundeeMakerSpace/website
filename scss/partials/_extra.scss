@@ -62,12 +62,15 @@
 .post-preview {
     @include tp-trailer(2);
     @include tp-padding-trailer(2);
-    // border-bottom: 1px solid $border-c;
 }
 
-.post-preview__image + .post-preview__title {
+.post-preview__image-link {
+    display: block;
+}
+
+.has-post-thumbnail .post-preview__title {
     @include tp-leader(-2);
-    position: relative;
+    // position: relative;
     // background: linear-gradient(to bottom, rgba($bgc, 0), rgba($bgc, .99));
     a {
         display: inline-block;
@@ -140,6 +143,7 @@
 
     &.has-bgimg h1 {
         text-shadow: 0 0 .5em $text-c;
+        opacity: 0.9;
     }
 }
 

@@ -9,10 +9,10 @@ $font-size: 1.4;
 $ms-base: $font-size;
 $line-height: ms($font-size, 1);
 
-$font-sans: "Raleway", Helvetica, Arial, sans-serif;
-$font-display: "dodge", Helvetica, Arial, sans-serif;
+$font-sans: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font-display: "Raleway", Helvetica, Arial, sans-serif;
 $font-serif: Georgia, serif;
-$font-h: $font-sans;
+$font-h: $font-display;
 $font-body: $font-sans;
 
 $normalize_headings: false;
