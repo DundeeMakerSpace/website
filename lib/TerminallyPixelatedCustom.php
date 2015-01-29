@@ -31,11 +31,11 @@ class TerminallyPixelatedCustom {
     function map() {
         TerminallyPixelatedMap::init(
             'makerspace-map',
-            56.462232,
-            -2.984308,
+            56.456189,
+            -2.978143,
             14,
-            '<address>Unit 3A, Meadow Mill, <br>West Henderson\'s Wynd, <br>DD1 5BY</address>
-            <a target="_blank" href="' . TerminallyPixelatedMap::get_directions_link( 'Unit 3A Meadow Mill, West Hendersons Wynd, DD1 5BY' ) . '">Get Directions</a>'
+            '<address>Unit 5, <br />20 Greenmarket, <br />DD1 4QB</address>
+            <a target="_blank" href="' . TerminallyPixelatedMap::get_directions_link( 'Unit 5, 20 Greenmarket, DD1 4QB' ) . '">Get Directions</a>'
         );
     }
 
