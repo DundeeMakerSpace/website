@@ -17,7 +17,7 @@ class TerminallyPixelatedBase {
 		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts' ) );
 		add_action( 'wp_footer', array( $this, 'google_analytics' ), 100 );
 		add_filter( 'style_loader_tag', array( $this, 'tidy_style_tag' ) );
-		add_filter( 'clean_url', array( $this, 'add_require_attributes' ), 10, 3 );
+		// add_filter( 'clean_url', array( $this, 'add_require_attributes' ), 10, 3 );
 		add_action( 'admin_init', array( $this, 'remove_image_links' ) );
 		add_filter( 'timber_context', array( $this, 'timber_context' ) );
 		add_filter( 'excerpt_more', array( $this, 'excerpt_more' ) );
@@ -114,7 +114,11 @@ class TerminallyPixelatedBase {
 	}
 
 	public function add_scripts() {
-		wp_enqueue_script( 'require', TPHelpers::get_theme_resource_uri( 'js/vendor/require.js' ), array( 'jquery' ) , 1, true );
+		wp_register_script( 'footable', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.js' ), array( 'jquery' ), false, true );
+		wp_register_script( 'footable.sort', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.sort.js' ), array( 'jquery', 'footable' ), false, true );
+		wp_register_script( 'footable.filter', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.filter.js' ), array( 'jquery', 'footable' ), false, true );
+		wp_register_script( 'footable.paginate', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.paginate.js' ), array( 'jquery', 'footable' ), false, true );
+		wp_enqueue_script( 'main', TPHelpers::get_theme_resource_uri( 'js/main.js' ), array( 'jquery', 'footable', 'footable.paginate', 'footable.sort', 'footable.filter' ) );
 	}
 
 	function add_require_attributes( $good_protocol_url, $original_url, $_context ) {

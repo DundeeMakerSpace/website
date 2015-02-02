@@ -1,8 +1,4 @@
-if (typeof jQuery === 'function') {
-    define('jquery', function () { return jQuery; });
-}
-
-require(['jquery', 'vendor/footable/footable', 'vendor/footable/footable.paginate', 'vendor/footable/footable.sort', 'vendor/footable/footable.filter'], function($){
+(function($){
     $('.listing-table').footable({
         breakpoints: {
             phone: 490,
@@ -17,4 +13,4 @@ require(['jquery', 'vendor/footable/footable', 'vendor/footable/footable.paginat
         e.preventDefault();
         $filter.slideToggle();
     });
-});
+})(jQuery);
