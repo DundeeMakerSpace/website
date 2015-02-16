@@ -85,22 +85,22 @@ $header-bgc: transparent;
 $header-c: $white;
 
 $nav-link-c: $text-c;
-$nav-link-bg: $bgc;
+$nav-link-bg: transparent;
 
 $nav-link-c--hover: $red;
-$nav-link-bg--hover: $white;
+$nav-link-bg--hover: $nav-link-bg;
 
 $nav-link-c--current: $red;
 $nav-link-bg--current: $white;
 
 $subnav-link-c: $nav-link-c;
-$subnav-link-bg: $nav-link-bg;
+$subnav-link-bg: darken($bgc, 5%);
 
 $subnav-link-c--hover: $nav-link-c--hover;
-$subnav-link-bg--hover: $nav-link-bg--hover;
+$subnav-link-bg--hover: darken($bgc, 5%);
 
 $subnav-link-c--current: $nav-link-c--current;
-$subnav-link-bg--current: $nav-link-bg--current;
+$subnav-link-bg--current: darken($bgc, 5%);
 
 $footer-bgc: $black;
 $footer-c: mix($white, $black, 80%);

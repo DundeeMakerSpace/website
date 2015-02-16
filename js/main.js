@@ -1,4 +1,13 @@
 (function($){
+    $('html').removeClass('no-js');
+    $('html').addClass('js');
+
+    // Nice navigation
+    $('#main-nav-sidr').sidr({
+        source: '#tp-nav-main-nav',
+        side: 'right'
+    });
+
     $('.listing-table').footable({
         breakpoints: {
             phone: 490,

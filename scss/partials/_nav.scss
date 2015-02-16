@@ -11,19 +11,17 @@
 }
 
 .main-nav__li {
-
+    &.menu-item-has-children {
+        @include scut-selected(true) {
+            background: $subnav-link-bg;
+        }
+    }
 }
 
 .main-nav__a {
-    display: block;
-    padding: .4em;
     color: $nav-link-c;
     background: $nav-link-bg;
     font-weight: bold;
-
-    @include breakpoint($large-break, '.lt-ie9') {
-        padding: .2em 0;
-    }
 
     @include scut-selected(true) {
         color: $nav-link-c--hover;
@@ -38,17 +36,18 @@
 }
 
 // Unlike the main nav this is the ul element
-.sub-nav {
+.main-nav__sub-nav {
+    // background-color: darken($bgc, 5%);
+}
+
+.main-nav__sub-nav__li {
 
 }
 
-.sub-nav__li {
-
-}
-
-.sub-nav__a {
+.main-nav__sub-nav__a {
     color: $subnav-link-c;
     background: $subnav-link-bg;
+    @include tp-fs(-.5);
 
     @include scut-selected(true) {
         color: $subnav-link-c--hover;
@@ -116,4 +115,56 @@
 
 .pagination__link--prev__text {
     @extend %scut-hide-visually;
+}
+
+.nav-toggle {
+    background-color: rgba($bgc, .7);
+    color: $text-c;
+    text-transform: uppercase;
+    padding: 0.5em;
+    text-decoration: none;
+
+    &:before {
+        margin-right: 0.25em;
+    }
+}
+
+// Sidr overwrites
+.sidr {
+    font-family: $font-body;
+    background-color: $footer-bgc;
+    box-shadow: none;
+    @include tp-fs(0);
+}
+
+.sidr a {
+    color: $bgc;
+    box-shadow: none !important;
+    transition: all $transition-fast;
+    line-height: $line-height;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+
+    @include scut-selected(true) {
+        background-color: $bgc;
+        color: $footer-bgc;
+    }
+}
+
+.sidr ul,
+.sidr ul li {
+    border: none;
+}
+
+.sidr ul li:hover > a,
+.sidr ul li:hover > span,
+.sidr ul li.active > a,
+.sidr ul li.active > span,
+.sidr ul li.sidr-class-active > a,
+.sidr ul li.sidr-class-active > span {
+    box-shadow: none;
+}
+
+.sidr ul li ul li {
+    @include tp-fs(-1);
 }

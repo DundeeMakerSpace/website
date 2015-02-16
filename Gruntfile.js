@@ -81,6 +81,7 @@ module.exports = function( grunt ) {
           'footable/footable.paginate.js': 'footable/dist/footable.paginate.min.js',
           'footable/footable.sort.js': 'footable/dist/footable.sort.min.js',
           'leaflet.js': 'leaflet/dist/leaflet.js',
+          'sidr.js': 'sidr/jquery.sidr.min.js'
           // 'bxslider.js': 'bxslider-4/jquery.bxslider.min.js'
         }
       },
@@ -105,6 +106,7 @@ module.exports = function( grunt ) {
           '_hint.scss': 'hint.css/hint.css',
           '_footable.scss': 'footable/css/footable.core.css',
           '_leaflet.scss': 'leaflet/dist/leaflet.css',
+          '_sidr.scss': 'sidr/stylesheets/jquery.sidr.dark.css',
         }
       },
       fonts: {
@@ -136,21 +138,10 @@ module.exports = function( grunt ) {
       },
     },
 
-    requirejs: {
-      compile: {
-        options: {
-          baseUrl: "js",
-          mainConfigFile: "js/main.js",
-          name: "main",
-          out: "js/main.min.js"
-        }
-      }
-    }
-
 });
 
 
 grunt.registerTask('default', ['watch']);
-grunt.registerTask('build', ['bowercopy', 'compass', 'autoprefixer', 'csso', 'requirejs']);
+grunt.registerTask('build', ['bowercopy', 'compass', 'autoprefixer', 'csso']);
 
 };

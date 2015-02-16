@@ -118,7 +118,8 @@ class TerminallyPixelatedBase {
 		wp_register_script( 'footable.sort', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.sort.js' ), array( 'jquery', 'footable' ), false, true );
 		wp_register_script( 'footable.filter', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.filter.js' ), array( 'jquery', 'footable' ), false, true );
 		wp_register_script( 'footable.paginate', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.paginate.js' ), array( 'jquery', 'footable' ), false, true );
-		wp_enqueue_script( 'main', TPHelpers::get_theme_resource_uri( 'js/main.js' ), array( 'jquery', 'footable', 'footable.paginate', 'footable.sort', 'footable.filter' ) );
+		wp_register_script( 'sidr', TPHelpers::get_theme_resource_uri( 'js/vendor/sidr.js' ), array( 'jquery' ), false, true );
+		wp_enqueue_script( 'main', TPHelpers::get_theme_resource_uri( 'js/main.js' ), array( 'jquery', 'sidr', 'footable', 'footable.paginate', 'footable.sort', 'footable.filter' ), false, true );
 	}
 
 	function add_require_attributes( $good_protocol_url, $original_url, $_context ) {
