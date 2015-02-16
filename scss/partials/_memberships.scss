@@ -41,6 +41,17 @@ form.pmpro_form select {
     }
 }
 
+form.pmpro_form .pmpro_payment-expiration {
+    select {
+        display: inline-block;
+        float: none;
+        width: 40%;
+        @include breakpoint($mid-break, '.lt-ie9') {
+            width: 28%;
+        }
+    }
+}
+
 form.pmpro_form .input,
 form.pmpro_form textarea,
 .input,
@@ -48,10 +59,24 @@ form.pmpro_form select {
     @extend %input;
 }
 
+form.pmpro_form {
+    small {
+        float: right;
+        clear: both;
+        margin-top: -1em;
+        @include tp-trailer(.5);
+    }
+}
+
 body .pmpro_btn,
 body .pmpro_btn:link {
     @extend %button;
     @include tp-fs(-1);
+}
+
+.pmpro_btn-submit-checkout {
+    @include tp-fs(0);
+    font-weight: bold;
 }
 
 .pmpro_thead-msg {
@@ -62,7 +87,24 @@ body .pmpro_btn:link {
     }
 }
 
-// Don't need these payment fields
-#pmpro_payment_information_fields {
-    display: none !important;
+.pmpro_payment-discount-code {
+    #discount_code {
+        width: 60%;
+        display: inline-block;
+        @include breakpoint($mid-break, '.lt-ie9') {
+            @include span($mid-cols - 6 of $mid-cols);
+        }
+    }
+    #discount_code_button {
+        @extend .button--boring;
+        display: inline-block;
+        @include breakpoint($mid-break, '.lt-ie9') {
+            @include span(last 2 of $mid-cols);
+        }
+    }
 }
+
+// Don't need these payment fields
+// #pmpro_payment_information_fields {
+//     display: none !important;
+// }

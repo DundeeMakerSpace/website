@@ -17,3 +17,7 @@
 @mixin tp-padding-trailer($num: 1) {
     @include typecsset-space(padding-bottom, $num);
 }
+
+@mixin tp-space($property, $num: 1) {
+    @include typecsset-space($property, $num);
+}
