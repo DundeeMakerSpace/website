@@ -2,8 +2,8 @@
 
 {% block content %}
     {% if post.home_banner_title or post.home_banner_content %}
-        <section class="home-banner">
-            <div class="home-banner__inner">
+        <section class="home-banner content-section">
+            <div class="home-banner__inner content-section__content">
                 {% if post.home_banner_title %}
                     <h2 class="home-banner__title">{{post.home_banner_title}}</h2>
                 {% endif %}
@@ -13,20 +13,6 @@
             </div>
         </section>
     {% endif %}
-{#     <section class="home-widgets">
-        <div class="home-widgets__widget">
-            <h2 class="home-widgets__widget__title">Lorem ipsum dolor.</h2>
-            <div class="home-widgets__widget__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, unde, dicta, nam dolor rerum nesciunt ea vero veritatis repellendus corporis similique nihil illo cupiditate aut neque tempora dolores distinctio repudiandae facere odit commodi aliquid ullam eius laudantium quibusdam delectus repellat.</div>
-        </div>
-        <div class="home-widgets__widget">
-            <h2 class="home-widgets__widget__title">Impedit, deleniti aliquid.</h2>
-            <div class="home-widgets__widget__content">Optio, eaque, repudiandae incidunt odit rerum iusto magnam dolorem quisquam eius consequatur porro iure possimus? Rem, sunt, officia, vitae, quasi eius tenetur molestiae maiores quibusdam amet soluta numquam voluptatibus sapiente ad debitis ratione aut aliquam. Ab nam vel rem asperiores!</div>
-        </div>
-        <div class="home-widgets__widget">
-            <h2 class="home-widgets__widget__title">Modi, atque, soluta.</h2>
-            <div class="home-widgets__widget__content">Consectetur, dolor, sed ad ullam magni nesciunt voluptatum facere quam similique quidem eaque repudiandae! Earum, est quis praesentium deserunt ipsum quaerat dolor autem ipsam iusto laborum culpa placeat illo tempore expedita impedit consectetur maxime? Animi, iste dolore molestiae aliquid reprehenderit.</div>
-        </div>
-    </section> #}
 
     <section class="home-widgets">
         {{widgets}}

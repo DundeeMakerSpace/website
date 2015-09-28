@@ -7,33 +7,35 @@
 
     <body class="{{body_class}}">
 
-        <div class="main-wrapper">
-            {% block header %}
-                <header class="main-header" role='banner'>
-                    <div class="main-header__inner">
-                        <h1 class="main-title">
-                            <a href="{{bloginfo('url')}}" rel="home">
-                                {% if logo %}
-                                    <img src="{{logo.src}}" alt="{{bloginfo('name')}}">
-                                {% else %}
-                                    {{bloginfo('name')}}
-                                {% endif %}
-                            </a>
-                        </h1>
-                        <div class="main-header__donate">
-                            <a href="{{donate_page}}" class="button button--donate">Donate</a>
-                        </div>
-                    </div>
-                </header>
-            {% endblock %}
-
-            <a class="nav-toggle icon-th-menu" id="main-nav-sidr" href="#tp-nav-main-nav">Menu</a>
+        <header class="main-header" id="main-header" role='banner'>
+            <div class="main-header__inner">
+                <h1 class="main-title">
+                    <a href="{{bloginfo('url')}}" rel="home">
+                        {% if logo %}
+                            <img src="{{logo.src}}" alt="{{bloginfo('name')}}">
+                        {% else %}
+                            {{bloginfo('name')}}
+                        {% endif %}
+                    </a>
+                </h1>
+            </div>
             {% include 'partials/nav.twig' with { 'nav_class': 'main-nav', 'menu': main_menu } %}
+            <div class="nav-social">
+                {{fn('the_dev_profile_links')}}
+            </div>
+        </header>
+
+        <div class="main-wrapper" id="main-wrapper">
+
+            <a class="nav-toggle icon-th-menu" id="nav-toggle" href="#tp-nav-main-nav">Menu</a>
 
             <div class="main-content-sidebar-wrap">
-                <main role="main" class="main-content{% if not main_sidebar %}--full-width{% endif %}">
+                {% block header %}
+                {% endblock %}
+
+                <main role="main" class="main-content {% if not main_sidebar %}main-content--full-width{% endif %}">
                     {% if title %}
-                        <header role="heading">
+                        <header class="article-title content-section block" role="heading">
                             <h1 class="posttitle p-name">{{title}}</h1>
                         </header>
                     {% endif %}
@@ -56,30 +58,17 @@
                 {% endif %}
             </div>
 
-            <footer class="main-footer">
-            <div class="makerspace-map" id="makerspace-map"></div>
+            <footer class="main-footer content-section">
                 <div class="main-footer__inner">
-                    {% if footer_widgets %}
-                        <section class="footer-widgets-wrapper">
-                            {% for widget_area in footer_widgets %}
-                                <div class="footer-widgets footer-widgets--{{loop.index}}">
-                                    {{widget_area}}
-                                </div>
-                            {% endfor %}
-                        </section>
-                    {% endif %}
-                    <section class="footer-social">
-                        {{fn('the_dev_profile_links')}}
-                    </section>
                     {% include 'partials/nav.twig' with { 'nav_class': 'main-footer__nav', 'menu': footer_menu } %}
                 </div>
             </footer>
-            {# {% if makerspace_open %} #}
+            {# {% if makerspace_open %}
                 <div class="space-status-notification" id="space-status-notification">
                     <span class="space-status-notification__text">Dundee MakerSpace is open!</span>
                     <button class="space-status-notification__close" id="space-status-notification__close">x</button>
                 </div>
-            {# {% endif %} #}
+            {% endif %} #}
         </div>
         {{wp_footer}}
     </body>

@@ -1,29 +1,38 @@
 {% extends "base.twig" %}
 
 {% block content %}
+    <header class="article__header">
+        {% if post.thumbnail.src %}
+            <div class="article__header__image content-section" style="background-image: url({{post.thumbnail.src|resize(1920)}});"></div>
+        {% endif %}
+        {% if not hide_title %}
+            <h1 class="article__header__title block content-section">{{post.title}}</h1>
+        {% endif %}
+    </header>
+
     <div class="page-builder">
         {% for block in post.get_field('page_builder_blocks') %}
             {% if block.acf_fc_layout == 'content' %}
-                <div class="block">
-                    <div class="block__inner">{{block.content}}</div>
+                <div class="block content-section">
+                    <div class="block__inner content-section__content">{{block.content}}</div>
                 </div>
             {% elseif block.acf_fc_layout == 'highlighted_content' %}
-                <div class="block--highlight">
-                    <div class="block__inner">{{block.content}}</div>
+                <div class="content-section block block--highlight">
+                    <div class="block__inner content-section__content">{{block.content}}</div>
                 </div>
             {% elseif block.acf_fc_layout == 'separator' %}
-                <div class="block--separator">
+                <div class="content-section block block--separator">
                     <div class="block__inner"></div>
                 </div>
             {% elseif block.acf_fc_layout == 'banner' %}
-                <div class="block--banner">
-                    <div class="block__inner">
+                <div class="content-section block block--banner">
+                    <div class="block__inner content-section__content">
                         <h2>{{block.title}}</h2>
                         {{block.content}}
                     </div>
                 </div>
             {% elseif block.acf_fc_layout == '2_columns' %}
-                <div class="block--two-cols">
+                <div class="content-section block block--two-cols">
                     <div class="block__inner">
                         {% for column in block.columns %}
                             {% if loop.index is divisible by (2) %}
@@ -34,7 +43,7 @@
                     </div>
                 </div>
             {% elseif block.acf_fc_layout == '3_columns' %}
-                <div class="block--three-cols">
+                <div class="content-section block block--three-cols">
                     <div class="block__inner">
                         {% for column in block.columns %}
                             {% if loop.index is divisible by (3) %}

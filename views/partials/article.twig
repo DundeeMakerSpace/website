@@ -1,19 +1,13 @@
-<article class="{{post.post_class}}">
-    {% block content %}
-        {% if is_archive %}
-            <h1><a href="{{post.get_path}}">{{post.title}}</a></h1>
-            <p>{{post.excerpt}}</p>
-        {% else %}
-        <header>
-            {% if title is not defined %}
-            <h1>
-                {% if is_archive %}<a href="{{post.get_path}}">{% endif %}
-                    {{post.title}}
-                {% if is_archive %}</a>{% endif %}
-            </h1>
-            {% endif %}
-        </header>
-            {{post.content}}
-        {% endif %}
-    {% endblock %}
+<header class="article__header">
+    {% if post.thumbnail.src %}
+        <div class="article__header__image content-section" style="background-image: url({{post.thumbnail.src|resize(1920)}});"></div>
+    {% endif %}
+    <h1 class="article__header__title block content-section">{{post.title}}</h1>
+</header>
+
+<article class="{{post.post_class}} article content-section">
+    <div class="article__content content-section__content">
+        {{post.content}}
+    </div>
+    {% include 'partials/post-footer.twig' %}
 </article>

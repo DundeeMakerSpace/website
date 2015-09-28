@@ -11,42 +11,55 @@ module.exports = function( grunt ) {
 
   var config = {
     sassFiles: ['scss/style.scss', 'scss/editor-style.scss'],
-    uglify: []
+    sassPartials: ['scss/**/_*.scss', 'scss/*.scss'],
+    cssFiles: ['style.css', 'main.css'],
+    jsFiles: ['js/**/*.js'],
+    templateFiles: ['**/*.php', 'views/**/*.twig']
   };
+  config.allSassFiles = config.sassFiles.concat(config.sassPartials);
+  config.bsFiles = config.cssFiles.concat(config.jsFiles).concat(config.templateFiles);
 
   grunt.initConfig({
-    compass: {
+    sass: {
+      options: {
+        sourceMap: true
+      },
       dist: {
-        options: {
-          sassDir: 'scss',
-          imagesDir: 'img',
-          cssDir: '.',
-          javascriptsDir: 'js',
-          fontsDir: 'fonts',
-          relativeAssets: true,
-          environment: 'development',
-          specify: config.sassFiles
+        files: {
+          'style.css': 'scss/style.scss',
+          'editor-style.css': 'scss/editor-style.scss'
         }
       }
     },
 
-    // default watch configuration
     watch: {
-      compass: {
-        files: '**/*.scss',
-        tasks: ['compass', 'autoprefixer', 'csso']
-      },
-      livereload: {
-        options: {
-          livereload: true
+        js: {
+          files: 'js/**/*.js',
+          // tasks: ['jsCompileDev']
         },
-        files: ['**/*.css', '**/*.js', '**/*.php', '**/*.twig']
+        sass: {
+          files: 'scss/**/*.scss',
+          tasks: ['cssCompileDev']
+        }
       },
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: config.bsFiles
+        },
+        options: {
+          watchTask: true,
+          debugInfo: true,
+          open: false,
+          proxy: 'https://local.dms.dev',
+        }
+      }
     },
 
     autoprefixer: {
       options: {
-        browsers: ['last 2 version', 'ie 8', 'ie 9']
+        browsers: ['last 2 version']
       },
       dist: {
         options: {
@@ -75,14 +88,12 @@ module.exports = function( grunt ) {
           destPrefix: 'js/vendor'
         },
         files: {
-          'require.js': 'requirejs/require.js',
           'footable/footable.js': 'footable/dist/footable.min.js',
           'footable/footable.filter.js': 'footable/dist/footable.filter.min.js',
           'footable/footable.paginate.js': 'footable/dist/footable.paginate.min.js',
           'footable/footable.sort.js': 'footable/dist/footable.sort.min.js',
           'leaflet.js': 'leaflet/dist/leaflet.js',
-          'sidr.js': 'sidr/jquery.sidr.min.js'
-          // 'bxslider.js': 'bxslider-4/jquery.bxslider.min.js'
+          'slideout.js': 'slideout.js/dist/slideout.min.js'
         }
       },
       scss: {
@@ -99,14 +110,10 @@ module.exports = function( grunt ) {
           'susy': 'susy/sass/susy',
           '_modular-scale.scss': 'modular-scale/stylesheets/_modular-scale.scss',
           'modular-scale': 'modular-scale/stylesheets/modular-scale',
-          '_animate.sass': 'animate.sass/stylesheets/_animate.sass',
-          'animate': 'animate.sass/stylesheets/animate',
-          '_sassybuttons.sass': 'sassy-buttons/_sassybuttons.sass',
-          'sassy-buttons': 'sassy-buttons/sassy-buttons',
           '_hint.scss': 'hint.css/hint.css',
           '_footable.scss': 'footable/css/footable.core.css',
           '_leaflet.scss': 'leaflet/dist/leaflet.css',
-          '_sidr.scss': 'sidr/stylesheets/jquery.sidr.dark.css',
+          '_slideout.scss': 'slideout.js/index.css',
         }
       },
       fonts: {
@@ -128,7 +135,7 @@ module.exports = function( grunt ) {
         appleTouchBackgroundColor: '#FFFFFF',
         tileColor: '#FF702E',
         androidHomescreen: true,
-        html: 'views/partials/head.twig',
+        html: 'views/partials/icons.twig',
         HTMLPrefix: '{{icon_path}}',
         trueColor: true,
       },
@@ -138,10 +145,18 @@ module.exports = function( grunt ) {
       },
     },
 
+    clean: {
+      icons: ['views/partials/icons.twig']
+    },
+
 });
 
 
-grunt.registerTask('default', ['watch']);
-grunt.registerTask('build', ['bowercopy', 'compass', 'autoprefixer', 'csso']);
+  grunt.registerTask('cssCompileDev', ['sass']);
+  grunt.registerTask('cssCompileDist', ['sass', 'autoprefixer', 'csso']);
+  grunt.registerTask('iconsCompile', ['clean:icons', 'favicons']);
+  grunt.registerTask('default', ['browserSync', 'watch']);
+  grunt.registerTask('serve', ['default']);
+  grunt.registerTask('build', ['bowercopy', 'cssCompileDist', 'iconsCompile']);
 
 };

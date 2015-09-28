@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <header class="article__header">
+        {% if post.thumbnail.src %}
+            <div class="article__header__image content-section" style="background-image: url({{post.thumbnail.src|resize(1920)}});"></div>
+        {% endif %}
+        <h1 class="content-section block">{{post.title}}</h1>
+    </header>
+
+    <article class="{{post.post_class}} article content-section">
+        <div class="article__content content-section__content">
+            {{post.content}}
+        </div>
+
+        {% if contributors %}
+            <footer class="single-project__contributors">
+                <h3 class="contibutors-list__title">Makers</h3>
+                <ul class="contributors-list">
+                    {% for contributor in contributors %}
+                        <li class="contributor-list__contibutor"><a href="{{fn('get_author_posts_url', contributor.data.ID)}}">{{contributor.data.display_name}}</a></li>
+                    {% endfor %}
+                </ul>
+            </footer>
+        {% endif %}
+
+        {% include 'partials/post-footer.twig' %}
+    </article>
+{% endblock %}

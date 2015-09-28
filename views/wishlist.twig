@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <header class="article__header">
+        {% if post.thumbnail.src %}
+            <div class="article__header__image content-section" style="background-image: url({{post.thumbnail.src|resize(1920)}});"></div>
+        {% endif %}
+        <h1 class="content-section block article__header__title">{{post.title}}</h1>
+    </header>
+
+    {{fn('MakerspaceWishlist::get_wishlist_html')}}
+{% endblock %}

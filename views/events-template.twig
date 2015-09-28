@@ -1,9 +1,12 @@
 {% extends "base.twig" %}
 
-{% block content %}
-    <div id="tribe-events-pg-template">
+{% block header %}
+    <div id="tribe-events-pg-template" class="content-section content-section--full">
         {{fn('tribe_events_before_html')}}
         {{fn('tribe_get_view')}}
         {{fn('tribe_events_after_html')}}
     </div>
+{% endblock %}
+
+{% block content %}
 {% endblock %}

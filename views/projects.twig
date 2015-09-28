@@ -1,37 +1,39 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    <div class="listing-table-filter">
-        <label for="listing-table-filter__input" class="listing-table-filter__label">Search Projects</label>
-        <input type="search" class="listing-table-filter__input" id="listing-table-filter__input" name="listing-table-filter__input">
-    </div>
-    <table class="listing-table" data-page-size="20" data-filter="#listing-table-filter__input">
-        <thead class="listing-table__head">
-            <tr>
-                <th>Project</th>
-                <th data-hide="phone">Maker</th>
-                <th data-hide="phone">Status</th>
-                <th data-hide="phone,tablet">Last Updated</th>
-                <th data-sort-ignore="true"></th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for project in projects %}
+    <div class="content-section content-section--full">
+        <div class="listing-table-filter">
+            <label for="listing-table-filter__input" class="listing-table-filter__label">Search Projects</label>
+            <input type="search" class="listing-table-filter__input" id="listing-table-filter__input" name="listing-table-filter__input">
+        </div>
+        <table class="listing-table" data-page-size="20" data-filter="#listing-table-filter__input">
+            <thead class="listing-table__head">
                 <tr>
-                    <td class="listing-table__row__title" data-project-title="{{project.title}}"><a href="{{project.link}}">{{project.title}}</a></td>
-                    <td><a href="{{fn('get_author_posts_url', project.maker.ID)}}">{{project.maker.display_name}}</a></td>
-                    <td>{{project.project_status.name}}</td>
-                    <td><date datetime="{{project.post_modified_gmt}}">{{project.post_modified_gmt|date('Y-m-d')}}</date></td>
-                    <td><a class="button--boring" href="{{project.link}}">View <span class="small-screen-hide-text">Project</span></a></td>
+                    <th>Project</th>
+                    <th data-hide="phone">Maker</th>
+                    <th data-hide="phone">Status</th>
+                    <th data-hide="phone,tablet">Last Updated</th>
+                    <th data-sort-ignore="true"></th>
                 </tr>
-            {% endfor %}
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5">
-                    <div class="pagination pagination-centered hide-if-no-paging"></div>
-                </td>
-            </tr>
-        </tfoot>
-    </table>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                    <tr>
+                        <td class="listing-table__row__title" data-project-title="{{project.title}}"><a href="{{project.link}}">{{project.title}}</a></td>
+                        <td><a href="{{fn('get_author_posts_url', project.maker.ID)}}">{{project.maker.display_name}}</a></td>
+                        <td>{{project.project_status.name}}</td>
+                        <td><date datetime="{{project.post_modified_gmt}}">{{project.post_modified_gmt|date('Y-m-d')}}</date></td>
+                        <td><a class="button button--boring" href="{{project.link}}">View <span class="small-screen-hide-text">Project</span></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        <div class="pagination pagination-centered hide-if-no-paging"></div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 {% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    {% for resource in resources %}
+        <a href="{{resource.link}}">
+            <h3>{{resource.name}}</h3>
+            <p>{{resource.excerpt}}</p>
+        </a>
+    {% endfor %}
+{% endblock %}

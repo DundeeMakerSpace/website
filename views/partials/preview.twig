@@ -1,0 +1,18 @@
+<article class="{{post.post_class}} article-preview content-section content-section--full block">
+    {% if post.thumbnail.src %}
+        <a class="article-preview__image-link" href="{{post.link}}"><img src="{{post.thumbnail.src|resize(1000,300)}}" alt="{{post.thumbnail.alt | default(post.thumbnail.post_title)}}" class="article-preview__image"></a>
+    {% endif %}
+    <div class="article-preview__content content-section__content">
+        {% if fn('get_post_format', post.ID) == 'status' %}
+            {# This is a status update #}
+            <div class="article-preview__status">
+                <div class="article-preview__status__content">{{post.content}}</div>
+                <span class="article-preview__status__time">{{post.post_date_gmt|time_ago}}</span>
+            </div>
+        {% else %}
+            {# This is a standard post #}
+            <h1 class="article-preview__title"><a href="{{post.link}}">{{post.title}}</a></h1>
+            <p>{{post.get_preview()}}</p>
+        {% endif %}
+    </div>
+</article>

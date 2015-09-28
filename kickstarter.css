@@ -2122,7 +2122,6 @@ ul.faqs li.faq.expanded {
 }
 ul.faqs li.faq.expanded .faq-question .ss-navigateright {
     -webkit-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
     transform:rotate(90deg)
 }
 ul.faqs li.faq.expanded .faq-answer {
@@ -2174,7 +2173,6 @@ ul.faqs_alt li .answer {
 }
 ul.faqs_alt li.expanded .ss-icon {
     -webkit-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
     transform:rotate(90deg)
 }
 ul.faqs_alt li.expanded .question {
@@ -2676,7 +2674,6 @@ div.modal_dialog.tall .controls .ss-icon {
     background:url(/assets/projects/button-playvideo-1c78f76d5ef22464a7a100b44903d06d.png) no-repeat center center;
     background-color:#0b1902;
     background-color:rgba(11, 25, 2, 0.95);
-    -o-border-radius:6px;
     border-radius:6px;
     border:4px solid white;
     -o-box-shadow:0px 0px 5px rgba(0, 0, 0, 0.6);
@@ -9463,7 +9460,6 @@ body.mobile section#NS__discover_advanced_sentence .sentence form .title {
     -webkit-text-overflow:ellipsis;
     -moz-text-overflow:ellipsis;
     -ms-text-overflow:ellipsis;
-    -o-text-overflow:ellipsis;
     text-overflow:ellipsis
 }
 body.mobile section#NS__discover_advanced_sentence .sentence #filters {
@@ -9755,7 +9751,6 @@ body#events_blockparty .vendor-image:hover .overlay {
 }
 body#events_blockparty .event.has-rsvp .rsvp {
     -webkit-transform:scale(1.1);
-    -ms-transform:scale(1.1);
     transform:scale(1.1)
 }
 body#events_blockparty .event.has-rsvp .rsvp-tag {
@@ -9766,7 +9761,6 @@ body#events_blockparty .event.has-rsvp .rsvp-tag {
 }
 body#events_blockparty .event.has-rsvp:hover .rsvp {
     -webkit-transform:scale(1);
-    -ms-transform:scale(1);
     transform:scale(1);
     opacity:1
 }
@@ -10756,16 +10750,6 @@ body.friends #friends_opted_out p a {
         color:#0f2105
     }
 }
-@-ms-keyframes highlight {
-    0%, 50% {
-        background-color:#e8fad4;
-        color:#87c442
-    }
-    100% {
-        background-color:transparent;
-        color:#0f2105
-    }
-}
 @keyframes highlight {
     0%, 50% {
         background-color:#e8fad4;
@@ -10778,20 +10762,16 @@ body.friends #friends_opted_out p a {
 }
 .edit_user.animate {
     -webkit-animation-duration:1.5s;
-    -ms-animation-duration:1.5s;
     animation-duration:1.5s;
     -webkit-animation-fill-mode:both;
-    -ms-animation-fill-mode:both;
     animation-fill-mode:both;
     -webkit-animation-timing-function:ease-in;
-    -ms-animation-timing-function:ease-in;
     animation-timing-function:ease-in
 }
 .edit_user.highlight {
     background-color:#e8fad4;
     color:#87c442;
     -webkit-animation-name:highlight;
-    -ms-animation-name:highlight;
     animation-name:highlight
 }
 #friends_subnav .header {
@@ -13138,7 +13118,6 @@ body.admin table.admin_inspect_table td, body.admin table.admin_inspect_table th
 }
 .NS-date_range_picker .ss-navigateright.flipped {
     -webkit-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
     transform:rotate(90deg)
 }
 .NS-date_range_picker .date_presets {
@@ -13859,7 +13838,6 @@ h3.dotty .right a {
     -webkit-text-overflow:ellipsis;
     -moz-text-overflow:ellipsis;
     -ms-text-overflow:ellipsis;
-    -o-text-overflow:ellipsis;
     text-overflow:ellipsis
 }
 body.checkout #main {
@@ -14280,7 +14258,6 @@ body.minimal#users_new #content-wrap, body.minimal#user_sessions_new #content-wr
 }
 .NS_layouts__navigation .dropdown.selected .ss-dropdown {
     -webkit-transform:rotate(180deg);
-    -ms-transform:rotate(180deg);
     transform:rotate(180deg);
     top:-3px
 }
@@ -14730,7 +14707,6 @@ li.thread .msg .name .person, li.thread-admin .msg .name .person {
     -webkit-text-overflow:ellipsis;
     -moz-text-overflow:ellipsis;
     -ms-text-overflow:ellipsis;
-    -o-text-overflow:ellipsis;
     text-overflow:ellipsis;
     width:170px
 }
@@ -14745,7 +14721,6 @@ li.thread .msg .subject_line .subject, li.thread-admin .msg .subject_line .subje
     -webkit-text-overflow:ellipsis;
     -moz-text-overflow:ellipsis;
     -ms-text-overflow:ellipsis;
-    -o-text-overflow:ellipsis;
     text-overflow:ellipsis;
     color:#0f2105;
     width:205px
@@ -14764,7 +14739,6 @@ li.thread .msg .excerpt, li.thread-admin .msg .excerpt {
     -webkit-text-overflow:ellipsis;
     -moz-text-overflow:ellipsis;
     -ms-text-overflow:ellipsis;
-    -o-text-overflow:ellipsis;
     text-overflow:ellipsis;
     color:#828587;
     margin-bottom:0px
@@ -14833,7 +14807,6 @@ li.thread.selected a .subject_line .count, li.thread-admin.selected a .subject_l
     -webkit-text-overflow:ellipsis;
     -moz-text-overflow:ellipsis;
     -ms-text-overflow:ellipsis;
-    -o-text-overflow:ellipsis;
     text-overflow:ellipsis;
     opacity:0;
     transition-property:opacity;
@@ -14847,7 +14820,6 @@ li.thread.selected a .subject_line .count, li.thread-admin.selected a .subject_l
     -webkit-text-overflow:ellipsis;
     -moz-text-overflow:ellipsis;
     -ms-text-overflow:ellipsis;
-    -o-text-overflow:ellipsis;
     text-overflow:ellipsis;
     margin-bottom:3px
 }
@@ -14905,7 +14877,6 @@ li.thread.selected a .subject_line .count, li.thread-admin.selected a .subject_l
 }
 .NS_message_threads__show .backing .thread_controls a.selected .ss-navigatedown {
     -webkit-transform:rotate(180deg);
-    -ms-transform:rotate(180deg);
     transform:rotate(180deg);
     margin-bottom:5px
 }
@@ -16285,7 +16256,6 @@ body#pledges_new .pledges__checkout_amount .flash-error a:hover, body#pledges_ed
 }
 .pledges__checkout_faqs ul.faqs li.faq.expanded .faq-question a .ss-icon {
     -webkit-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
     transform:rotate(90deg);
     margin-left:-18px;
     margin-right:5px;
@@ -17806,7 +17776,6 @@ body.posts #post-publisher-wrap {
 }
 .NS_projects__creator_nav .close .expand_link .text, .NS_projects__creator_nav .close .collapse_link .text {
     -webkit-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
     transform:rotate(90deg)
 }
 .NS_projects__creator_nav .close .expand_link {
@@ -25575,7 +25544,8 @@ body#ksr_admin_sessions_new #content-wrap footer {
     height:40px;
     border-radius:6px;
     -webkit-appearance:none;
-    appearance:none
+    -moz-appearance:none;
+         appearance:none
 }
 .form-simple textarea {
     box-sizing:border-box;
@@ -25583,7 +25553,8 @@ body#ksr_admin_sessions_new #content-wrap footer {
     font-size:14px;
     border-radius:6px;
     -webkit-appearance:none;
-    appearance:none
+    -moz-appearance:none;
+         appearance:none
 }
 .form-simple select {
     box-sizing:border-box;
@@ -26422,7 +26393,6 @@ code {
 }
 .button_icon_resize:hover .ss-icon {
     -webkit-transform:scale(1.2);
-    -ms-transform:scale(1.2);
     transform:scale(1.2)
 }
 .button_icon_circle {
@@ -26772,7 +26742,6 @@ ul.menu-tabs li.selected a:hover .count {
 }
 .ksr-select.ksr-popover-active .ss-navigatedown {
     -webkit-transform:rotate(180deg);
-    -ms-transform:rotate(180deg);
     transform:rotate(180deg);
     top:4px
 }
@@ -26904,7 +26873,6 @@ body.mobile .ksr-popover .ksr-popover-title {
 }
 .ksr-dropdown.open .ss-icon {
     -webkit-transform:rotate(180deg);
-    -ms-transform:rotate(180deg);
     transform:rotate(180deg);
     top:-4px
 }
@@ -26983,7 +26951,6 @@ article.prose.prose-small h1 {
 }
 .hover-group .hover-zoomout {
     -webkit-transform:scale(1.3);
-    -ms-transform:scale(1.3);
     transform:scale(1.3);
     transition:all 0.2s ease-in-out;
     opacity:0;
@@ -26999,12 +26966,10 @@ article.prose.prose-small h1 {
 .hover-group:hover .hover-zoomout {
     opacity:1;
     -webkit-transform:scale(1);
-    -ms-transform:scale(1);
     transform:scale(1)
 }
 .hover-group:hover .hover-zoomin {
     -webkit-transform:scale(1.05);
-    -ms-transform:scale(1.05);
     transform:scale(1.05)
 }
 .js .js-hide {
@@ -27592,7 +27557,6 @@ article.prose.prose-small h1 {
 }
 .blur {
     -webkit-transform:translate3d(0, 0, 0);
-    -ms-transform:translate3d(0, 0, 0);
     transform:translate3d(0, 0, 0);
     -ms-filter:blur(3px);
     -webkit-filter:blur(3px);

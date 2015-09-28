@@ -1,12 +1,14 @@
-<footer class="postmeta">
-    <p>
-        <span class="postmeta__posted">Posted</span>
-        <time class="postmeta__time" itemprop="datePublished" datetime="{{post.post_date|date('c')}}">{{post.post_date_gmt|time_ago}}</time>
-        <span class="postmeta__by">by</span>
-        <span class="postmeta__author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
-            <a href="{{post.author.link}}" class="postmeta__author__link" itemprop="url" rel="author">
-                <span class="postmeta__author__link__name" itemprop="name">{{post.author.display_name}}</span>
-            </a>
-        </span>
-    </p>
-</footer>
+{% if not hide_postmeta %}
+    <footer class="postmeta">
+        <p>
+            <span class="postmeta__posted">Posted</span>
+            <time class="postmeta__time" itemprop="datePublished" datetime="{{post.post_date|date('c')}}">{{post.post_date_gmt|time_ago}}</time>
+            <span class="postmeta__by">by</span>
+            <span class="postmeta__author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <a href="{{post.author.link}}" class="postmeta__author__link" itemprop="url" rel="author">
+                    <span class="postmeta__author__link__name" itemprop="name">{{post.author.display_name}}</span>
+                </a>
+            </span>
+        </p>
+    </footer>
+{% endif %}

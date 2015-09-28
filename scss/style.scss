@@ -1,35 +1,9 @@
-// Compass
-@import "compass";
-@import "compass/css3";
-@import "vendor/breakpoint";
-@import "vendor/susy";
-@import "vendor/modular-scale";
-@import "partials/wp-comment";
-@import "modules/variables";
-@import "modules/mixins";
-@import "vendor/normalize";
-@import "vendor/typecsset";
-@import "vendor/scut";
-@import "vendor/sassybuttons";
-@import "partials/fonts";
-@import "partials/typography";
-@import "partials/layout";
-@import "partials/main";
-@import "partials/wordpress-defaults";
-@import "partials/header";
-@import "vendor/sidr";
-@import "partials/nav";
-@import "partials/footer";
-@import "partials/home";
-@import "partials/events";
-@import "partials/widgets";
-@import "partials/forms";
-@import "partials/sidebar";
-@import "partials/extra";
-@import "partials/memberships";
-@import "partials/projects";
-@import "partials/resources";
-@import "partials/wishlist";
-@import "vendor/footable";
-@import "vendor/hint";
-@import "vendor/leaflet";
+@import "i-messed-up"; // A generated css file from previous scss
+
+// Membership buttons
+.pmpro_btn {
+    @extend .button;
+    background: #FF702E;
+    box-shadow: none;
+    text-shadow: none;
+}

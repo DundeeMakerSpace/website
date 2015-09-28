@@ -110,7 +110,7 @@ class TerminallyPixelatedBase {
 			wp_enqueue_style( 'style', TPHelpers::get_theme_resource_uri( '/style.css' ), false, 0 );
 		}
 
-		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Raleway:900', false, 0 );
+		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic', false, 0 );
 	}
 
 	public function add_scripts() {
@@ -118,8 +118,8 @@ class TerminallyPixelatedBase {
 		wp_register_script( 'footable.sort', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.sort.js' ), array( 'jquery', 'footable' ), false, true );
 		wp_register_script( 'footable.filter', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.filter.js' ), array( 'jquery', 'footable' ), false, true );
 		wp_register_script( 'footable.paginate', TPHelpers::get_theme_resource_uri( 'js/vendor/footable/footable.paginate.js' ), array( 'jquery', 'footable' ), false, true );
-		wp_register_script( 'sidr', TPHelpers::get_theme_resource_uri( 'js/vendor/sidr.js' ), array( 'jquery' ), false, true );
-		wp_enqueue_script( 'main', TPHelpers::get_theme_resource_uri( 'js/main.js' ), array( 'jquery', 'sidr', 'footable', 'footable.paginate', 'footable.sort', 'footable.filter' ), false, true );
+		wp_register_script( 'slideout', TPHelpers::get_theme_resource_uri( 'js/vendor/slideout.js' ), array( 'jquery' ), false, true );
+		wp_enqueue_script( 'main', TPHelpers::get_theme_resource_uri( 'js/main.js' ), array( 'jquery', 'slideout', 'footable', 'footable.paginate', 'footable.sort', 'footable.filter' ), false, true );
 	}
 
 	function add_require_attributes( $good_protocol_url, $original_url, $_context ) {
@@ -200,6 +200,8 @@ class TerminallyPixelatedBase {
 				$data['title'] = single_cat_title( '', false );
 			} else if (is_post_type_archive()) {
 				$data['title'] = post_type_archive_title( '', false );
+			} else if ( is_tax() ) {
+				$data['title'] = single_tag_title( '', false );
 			}
 		} elseif ( is_singular() ) {
 			$data['title'] = get_the_title();

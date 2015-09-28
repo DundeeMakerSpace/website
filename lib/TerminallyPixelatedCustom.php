@@ -12,7 +12,7 @@ class TerminallyPixelatedCustom {
         // add_action( 'wp_enqueue_scripts', array( $this, 'open_notification' ) );
         add_filter( 'author_link', array( $this, 'member_link' ), 10, 3);
         add_filter( 'login_url', array( $this, 'member_login_url' ), 10, 2 );
-        add_action( 'init', array( $this, 'map' ) );
+        // add_action( 'init', array( $this, 'map' ) );
     }
 
     public static function typekit() { ?>
@@ -34,7 +34,7 @@ class TerminallyPixelatedCustom {
             56.456189,
             -2.978143,
             14,
-            '<address>Unit 5, <br />20 Greenmarket, <br />DD1 4QB</address>
+            '<address>Unit 5, <br/>Vision Building, <br />20 Greenmarket, <br />DD1 4QB</address>
             <a target="_blank" href="' . TerminallyPixelatedMap::get_directions_link( 'Unit 5, 20 Greenmarket, DD1 4QB' ) . '">Get Directions</a>'
         );
     }

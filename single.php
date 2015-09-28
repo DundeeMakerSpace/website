@@ -4,10 +4,4 @@ if (!class_exists('Timber')){
 }
 $context = Timber::get_context();
 $context['post'] = Timber::get_post();
-
-$context['contributors'] = get_users( array(
-    'connected_type' => 'project_contributors',
-    'connected_items' => $post
-) );
-
-Timber::render( 'project.twig', $context );
+Timber::render( 'post.twig', $context );

@@ -2,10 +2,16 @@
     $('html').removeClass('no-js');
     $('html').addClass('js');
 
-    // Nice navigation
-    $('#main-nav-sidr').sidr({
-        source: '#tp-nav-main-nav',
-        side: 'right'
+    var slideout = new Slideout({
+        'panel': document.getElementById('main-wrapper'),
+        'menu': document.getElementById('main-header'),
+        'padding': 256,
+        'tolerance': 70
+    });
+
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+        slideout.toggle();
+        return false;
     });
 
     $('.listing-table').footable({
