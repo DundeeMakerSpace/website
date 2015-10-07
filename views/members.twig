@@ -6,7 +6,7 @@
     </div>
     <ul class="members-list">
         {% for member in members %}
-            <li class="member content-section" id='{{member.userdata.data.user_nicename}}'>
+            <li class="member {{member.checked_in ? 'member--is-checked-in' : ''}} content-section" id='{{member.userdata.data.user_nicename}}'>
                 <div class="member__image">{{member.avatar}}</div>
                 <div class="member__content">
                     <h2 class="member__title">{{member.userdata.display_name}}</h2>
