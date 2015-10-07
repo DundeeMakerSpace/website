@@ -3504,3 +3504,17 @@ body .pmpro_btn:link {
   background: #FF702E;
   box-shadow: none;
   text-shadow: none; }
+
+.member--is-checked-in .member__image {
+  position: relative; }
+  .member--is-checked-in .member__image:after {
+    content: "I'm in";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    color: white;
+    font-size: 0.6em;
+    padding: .3em;
+    line-height: 1; }
