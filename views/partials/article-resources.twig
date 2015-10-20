@@ -1,4 +1,4 @@
-<article class="{{post.post_class}}{% if is_archive %} resource-preview{% endif %}">
+<article class="{{post.post_class}}{% if is_archive %} resource-preview{% endif %} content-section">
     {% block content %}
         {% if is_archive %}
             {% if post.thumbnail.src %}
@@ -13,7 +13,7 @@
                 {% endif %}
             </header>
             {# <pre>{{post|print_r}}</pre> #}
-            <div class="single-resource__content">
+            <div class="single-resource__content content-section__content">
                 {{post.content}}
             </div>
 

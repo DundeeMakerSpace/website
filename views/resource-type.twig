@@ -2,9 +2,11 @@
 
 {% block content %}
     {% for resource in resources %}
-        <a href="{{resource.link}}">
-            <h3>{{resource.name}}</h3>
-            <p>{{resource.excerpt}}</p>
-        </a>
+        <div class="content-section">
+            <a href="{{resource.link}}">
+                <h3>{{resource.name}}</h3>
+                <p>{{resource.excerpt}}</p>
+            </a>
+        </div>
     {% endfor %}
 {% endblock %}

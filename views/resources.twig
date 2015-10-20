@@ -2,9 +2,11 @@
 
 {% block content %}
     {% for type in resource_types %}
-        <a href="{{type.link}}">
-            <h3>{{type.name}}</h3>
-            <p>{{type.description}}</p>
-        </a>
+        <div class="content-section">
+            <a href="{{type.link}}">
+                <h3>{{type.name}}</h3>
+                <p>{{type.description}}</p>
+            </a>
+        </div>
     {% endfor %}
 {% endblock %}
