@@ -3518,3 +3518,15 @@ body .pmpro_btn:link {
     font-size: 0.6em;
     padding: .3em;
     line-height: 1; }
+
+.home__widgets__event {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 2em; }
+  .widgettitle + .home__widgets__event {
+    margin-top: 0; }
+  .home__widgets__event h3 {
+    margin-bottom: 0; }
+  .home__widgets__event time {
+    margin-bottom: 1em; }
