@@ -15,6 +15,20 @@
     {% endif %}
 
     <section class="home-widgets">
+        {% if next_events %}
+            <div class="widget home-widgets__widget">
+                <h1 class="widgettitle home-widgets__widget__title">Upcoming Events</h1>
+                {% for event in next_events %}
+                    <a href="{{event.link}}" class="home__widgets__event">
+                        <h3>{{event.title}}</h3>
+                        <time datetime="{{event._EventStartDate}}">{{event._EventStartDate|date("l jS F Y @ g:ia")}}</time>
+                        {% if event.post_excerpt %}
+                            <p>{{event.post_excerpt}}</p>
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
         {{widgets}}
     </section>
 
