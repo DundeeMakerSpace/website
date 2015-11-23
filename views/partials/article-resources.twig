@@ -17,6 +17,15 @@
                 {{post.content}}
             </div>
 
+            {% if post.get_terms('resource-locations') %}
+                <div class="single-resource__location">
+                    <h3>Location</h3>
+                    {% for location in post.get_terms('resource-locations') %}
+                        <a href="{{location.link}}">{{location.name}}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
             {% if post._resources_pricing_members or post._resources_pricing_non_members  %}
                 <div class="single-resource__pricing">
                     <h3>Pricing</h3>

@@ -1,12 +1,19 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    {% for resource in resources %}
-        <div class="content-section">
-            <a href="{{resource.link}}">
-                <h3>{{resource.name}}</h3>
-                <p>{{resource.excerpt}}</p>
-            </a>
+    {% if term_description %}
+        <div class="content-section block block--highlight">
+            {{term_description}}
         </div>
-    {% endfor %}
+    {% endif %}
+    <div class="block content-section">
+        {% for resource in resources %}
+            <div>
+                <a href="{{resource.link}}">
+                    <h3>{{resource.name}}</h3>
+                    <p>{{resource.excerpt}}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
