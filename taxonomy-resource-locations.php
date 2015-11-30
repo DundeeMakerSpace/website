@@ -4,7 +4,9 @@ if (!class_exists('Timber')){
 }
 
 $context = Timber::get_context();
-$context['resources'] = Timber::get_posts();
+$context['resources'] = Timber::get_posts( array(
+    'posts_per_page' => -1,
+) );
 $context['term_description'] = term_description();
 
 Timber::render( 'resource-type.twig', $context );
