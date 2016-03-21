@@ -3530,3 +3530,11 @@ body .pmpro_btn:link {
     margin-bottom: 0; }
   .home__widgets__event time {
     margin-bottom: 1em; }
+
+body.tribe-events-page-template .tribe-events-event-meta,
+body.tribe-events-page-template .tribe-events-list-event-title,
+body.tribe-events-page-template .tribe-events-content {
+  padding-left: 1.5625% !important;
+  padding-right: 1.5625% !important; }
+
+/*# sourceMappingURL=style.css.map */
